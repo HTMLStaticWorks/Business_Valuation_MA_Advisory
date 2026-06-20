@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aegis | About Our Firm & Senior Advisors</title>
+  <meta name="description" content="Meet Aegis' partners and team. Explore our history, values, corporate credentials, and structured transaction processes.">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aegis | About Our Firm & Senior Advisors">
+  <meta property="og:description" content="Discover our story, mission, credentials, and elite team of financial advisory specialists.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#071A2F',
+              midnight: '#0F2747',
+              royal: '#2563eb',
+              slate: '#475569',
+              teal: '#0d9488',
+              gold: '#c5a880',
+              silver: '#e2e8f0'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body class="bg-slate-50 dark:bg-brand-navy text-slate-800 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
+
+  <!-- Scroll Progress Bar -->
+  <div class="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-royal via-brand-teal to-brand-gold z-50">
+    <div id="scroll-progress" class="h-full bg-brand-gold w-0 transition-all duration-100"></div>
+  </div>
+
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 w-full py-4 px-6 md:px-12 flex items-center justify-between bg-transparent">
+    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse" id="header-logo">
+      <img src="logo.png" alt="Aegis Logo" class="h-10 w-auto rounded">
+      <span class="text-2xl font-bold tracking-wider text-brand-navy dark:text-white font-serif flex items-center">
+        AEGIS
+      </span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex items-center space-x-8 rtl:space-x-reverse font-sans text-sm uppercase tracking-wider">
+      <a href="index.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Home 1
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="home2.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Home 2
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="about.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        About
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="transactions.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Transactions
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="blog.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Blog
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="contact.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Contact
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+    </nav>
+
+    <!-- Toolbar controls -->
+    <div class="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
+      <!-- Theme Toggle -->
+      <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-300/30 dark:border-white/10 text-brand-navy dark:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-label="Toggle theme">
+        <i class="fa-solid fa-sun sun-icon hidden text-brand-gold text-sm"></i>
+        <i class="fa-solid fa-moon moon-icon text-brand-navy dark:text-slate-300 text-sm"></i>
+      </button>
+
+      <!-- RTL Toggle -->
+      <button id="rtl-toggle" class="w-10 h-10 flex items-center justify-center text-xs font-bold rounded-full border border-slate-300/30 dark:border-white/10 text-brand-navy dark:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-label="Toggle text direction">
+        RTL
+      </button>
+
+      <a href="signup.html" class="px-5 py-2 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy border border-brand-gold text-sm font-semibold uppercase tracking-wider rounded transition-all duration-300 shadow-md">Sign Up</a>
+    </div>
+
+    <!-- Mobile controls & Hamburger -->
+    <div class="flex lg:hidden items-center space-x-2 rtl:space-x-reverse">
+      <button id="theme-toggle-mobile" class="p-2 text-brand-navy dark:text-slate-300" onclick="document.getElementById('theme-toggle').click()">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+      </button>
+      <button id="rtl-toggle-mobile" class="px-2 py-0.5 text-xs rounded border border-brand-navy/30 dark:border-white/30 text-brand-navy dark:text-slate-300" onclick="document.getElementById('rtl-toggle').click()">
+        RTL
+      </button>
+      <button id="hamburger-menu" class="p-2 focus:outline-none flex flex-col justify-between w-6 h-5" aria-expanded="false" aria-label="Toggle mobile menu">
+        <span class="w-full h-0.5 bg-brand-navy dark:bg-white transition-all duration-300"></span>
+        <span class="w-full h-0.5 bg-brand-navy dark:bg-white transition-all duration-300"></span>
+        <span class="w-full h-0.5 bg-brand-navy dark:bg-white transition-all duration-300"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Navigation Menu -->
+  <div id="mobile-nav" class="fixed inset-0 bg-brand-navy/95 backdrop-blur-lg z-30 hidden flex-col justify-center items-center space-y-6 text-xl text-white uppercase tracking-widest font-sans">
+    <a href="index.html" class="hover:text-brand-gold transition duration-300">Home 1</a>
+    <a href="home2.html" class="hover:text-brand-gold transition duration-300">Home 2</a>
+    <a href="about.html" class="hover:text-brand-gold transition duration-300">About</a>
+    <a href="transactions.html" class="hover:text-brand-gold transition duration-300">Transactions</a>
+    <a href="blog.html" class="hover:text-brand-gold transition duration-300">Blog</a>
+    <a href="contact.html" class="hover:text-brand-gold transition duration-300">Contact</a>
+    <div class="h-[1px] w-24 bg-brand-gold/40"></div>
+    <a href="signup.html" class="px-6 py-2.5 bg-brand-gold text-brand-navy font-semibold text-sm rounded hover:bg-white transition">Sign Up</a>
+  </div>
+
+  <main class="flex-grow pt-20">
+    <!-- Hero Banner -->
+    <section class="py-20 px-6 md:px-12 text-white text-center relative overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(7, 26, 47, 0.9), rgba(15, 39, 71, 0.95)), url('hero_about.png');">
+      <div class="max-w-4xl mx-auto space-y-4" data-aos="fade-up">
+        <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">The Aegis Story</span>
+        <h1 class="text-3xl md:text-5xl font-bold font-serif">About Our Advisory Firm</h1>
+        <div class="w-16 h-1 bg-brand-gold mx-auto mt-4"></div>
+        <p class="text-slate-300 text-sm md:text-base max-w-xl mx-auto">
+          Delivering elite corporate finance, mergers & acquisitions consulting, and defensive business valuation models to secure wealth for founders.
+        </p>
+      </div>
+    </section>
+
+    <!-- Company Story Section -->
+    <section class="py-24 px-6 md:px-12 bg-white dark:bg-brand-navy transition-colors">
+      <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-up">
+          <h2 class="text-3xl font-bold font-serif text-slate-900 dark:text-white">Our Corporate History</h2>
+          <p class="text-slate-600 dark:text-slate-400 mt-4 text-sm leading-relaxed">
+            Founded with a commitment to offering executive-level transactional advisory without the overhead of massive legacy banks, Aegis has managed over 120 mid-market corporate transitions.
+          </p>
+          <p class="text-slate-600 dark:text-slate-400 mt-4 text-sm leading-relaxed">
+            We focus exclusively on transactions ranging between $10M and $250M enterprise value. This focus allows us to provide undivided managing partner attention to every client, designing tailored marketing campaigns, maintaining rigorous data blockades, and coordinating exit structures.
+          </p>
+        </div>
+        <div class="relative" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Aegis Corporate HQ Building" class="rounded-xl shadow-xl object-cover h-[350px] w-full">
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Values Section -->
+    <section class="py-24 px-6 md:px-12 bg-slate-50 dark:bg-brand-midnight transition-colors">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+          <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Guiding Beliefs</span>
+          <h2 class="text-3xl font-bold font-serif mt-2 text-slate-900 dark:text-white">Mission & Core Values</h2>
+          <div class="w-16 h-1 bg-brand-gold mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white dark:bg-brand-navy p-8 rounded-xl border border-slate-200/50 dark:border-slate-800/50 shadow-md">
+            <div class="text-brand-gold text-2xl mb-4"><i class="fa-solid fa-scale-balanced"></i></div>
+            <h4 class="font-bold font-serif text-slate-900 dark:text-white mb-2">Unwavering Integrity</h4>
+            <p class="text-slate-500 text-xs">We provide objective financial advice. If a transaction is not in your strategic interest, we will explicitly recommend walking away.</p>
+          </div>
+
+          <div class="bg-white dark:bg-brand-navy p-8 rounded-xl border border-slate-200/50 dark:border-slate-800/50 shadow-md">
+            <div class="text-brand-gold text-2xl mb-4"><i class="fa-solid fa-eye-slash"></i></div>
+            <h4 class="font-bold font-serif text-slate-900 dark:text-white mb-2">Total Confidentiality</h4>
+            <p class="text-slate-500 text-xs">Protecting operational continuity is vital. We structure our marketing to ensure competitor groups never learn of transition goals early.</p>
+          </div>
+
+          <div class="bg-white dark:bg-brand-navy p-8 rounded-xl border border-slate-200/50 dark:border-slate-800/50 shadow-md">
+            <div class="text-brand-gold text-2xl mb-4"><i class="fa-solid fa-bullseye"></i></div>
+            <h4 class="font-bold font-serif text-slate-900 dark:text-white mb-2">Rigor & Precision</h4>
+            <p class="text-slate-500 text-xs">Our valuation dossiers are backed by defensible auditing records. We build detailed models that hold up under institutional buyer audits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Senior Advisor Credentials & Team Section -->
+    <section class="py-24 px-6 md:px-12 bg-white dark:bg-brand-navy transition-colors">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+          <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Senior Leadership</span>
+          <h2 class="text-3xl font-bold font-serif mt-2 text-slate-900 dark:text-white">Senior Advisor Credentials</h2>
+          <div class="w-16 h-1 bg-brand-gold mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Leader 1 -->
+          <div class="bg-slate-50 dark:bg-brand-midnight rounded-xl overflow-hidden shadow-lg border border-slate-200/50 dark:border-slate-800/50 group" data-aos="fade-up">
+            <div class="relative overflow-hidden h-72">
+              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="Executive Managing Partner" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-navy to-transparent opacity-0 group-hover:opacity-80 transition duration-300 flex items-end justify-center p-6">
+                <div class="flex space-x-4 text-white text-lg">
+                  <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href="#" class="hover:text-brand-gold transition"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 text-center">
+              <h4 class="font-bold font-serif text-lg text-slate-900 dark:text-white">Arthur Pendelton, CFA</h4>
+              <p class="text-xs text-brand-gold uppercase tracking-wider mt-1">Managing Partner & Founder</p>
+              <p class="text-slate-500 text-xs mt-3">25+ Years investment banking. Managed over $2B in mid-market transaction volumes across manufacturing and energy.</p>
+            </div>
+          </div>
+
+          <!-- Leader 2 -->
+          <div class="bg-slate-50 dark:bg-brand-midnight rounded-xl overflow-hidden shadow-lg border border-slate-200/50 dark:border-slate-800/50 group" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative overflow-hidden h-72">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="M&A Managing Partner" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-navy to-transparent opacity-0 group-hover:opacity-80 transition duration-300 flex items-end justify-center p-6">
+                <div class="flex space-x-4 text-white text-lg">
+                  <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href="#" class="hover:text-brand-gold transition"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 text-center">
+              <h4 class="font-bold font-serif text-lg text-slate-900 dark:text-white">Elizabeth Sterling</h4>
+              <p class="text-xs text-brand-gold uppercase tracking-wider mt-1">Managing Partner - M&A Advisory</p>
+              <p class="text-slate-500 text-xs mt-3">Ex-Wall Street Director. Specialized in SaaS, telecom, and healthcare tech rollups and strategic market acquisitions.</p>
+            </div>
+          </div>
+
+          <!-- Leader 3 -->
+          <div class="bg-slate-50 dark:bg-brand-midnight rounded-xl overflow-hidden shadow-lg border border-slate-200/50 dark:border-slate-800/50 group" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative overflow-hidden h-72">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80" alt="Valuation Director" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-navy to-transparent opacity-0 group-hover:opacity-80 transition duration-300 flex items-end justify-center p-6">
+                <div class="flex space-x-4 text-white text-lg">
+                  <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href="#" class="hover:text-brand-gold transition"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 text-center">
+              <h4 class="font-bold font-serif text-lg text-slate-900 dark:text-white">Marcus Vance, ASA</h4>
+              <p class="text-xs text-brand-gold uppercase tracking-wider mt-1">Director of Valuation Audits</p>
+              <p class="text-slate-500 text-xs mt-3">Senior Accredited Appraiser. Published authority on complex asset recasting and defensive IRS estate appraisal filings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advisory Process Section -->
+    <section class="py-24 px-6 md:px-12 bg-slate-50 dark:bg-brand-midnight transition-colors">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+          <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">The Aegis Framework</span>
+          <h2 class="text-3xl font-bold font-serif mt-2 text-slate-900 dark:text-white">Our Advisory Process</h2>
+          <div class="w-16 h-1 bg-brand-gold mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="p-6 bg-white dark:bg-brand-navy rounded-xl border border-slate-200/50 dark:border-slate-800/50 shadow relative">
+            <span class="text-5xl font-bold font-serif text-brand-gold/10 absolute top-4 right-4">01</span>
+            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white mb-2">Audit Engagement</h4>
+            <p class="text-slate-500 text-xs">We detail engagement terms under reciprocal NDAs and extract primary corporate ledgers and tax registries.</p>
+          </div>
+
+          <div class="p-6 bg-white dark:bg-brand-navy rounded-xl border border-slate-200/50 dark:border-slate-800/50 shadow relative">
+            <span class="text-5xl font-bold font-serif text-brand-gold/10 absolute top-4 right-4">02</span>
+            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white mb-2">Appraisal Modeling</h4>
+            <p class="text-slate-500 text-xs">Our analytical team publishes complete valuation models using multiple appraisal frameworks.</p>
+          </div>
+
+          <div class="p-6 bg-white dark:bg-brand-navy rounded-xl border border-slate-200/50 dark:border-slate-800/50 shadow relative">
+            <span class="text-5xl font-bold font-serif text-brand-gold/10 absolute top-4 right-4">03</span>
+            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white mb-2">Blind Outplacement</h4>
+            <p class="text-slate-500 text-xs">Vetted candidates receive blind summaries to prevent early leaks, gathering strategic Letters of Intent.</p>
+          </div>
+
+          <div class="p-6 bg-white dark:bg-brand-navy rounded-xl border border-slate-200/50 dark:border-slate-800/50 shadow relative">
+            <span class="text-5xl font-bold font-serif text-brand-gold/10 absolute top-4 right-4">04</span>
+            <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white mb-2">Deal Closure</h4>
+            <p class="text-slate-500 text-xs">Managing coordination with legal partners to oversee audits and complete transfer registries securely.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-20 px-6 md:px-12 bg-brand-navy text-white transition-colors">
+      <div class="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div>
+          <h3 class="text-4xl md:text-5xl font-bold font-serif text-brand-gold"><span class="stat-counter" data-target="20" data-suffix="+">0</span></h3>
+          <p class="text-xs uppercase tracking-wider text-slate-400 mt-2">Years of Service</p>
+        </div>
+        <div>
+          <h3 class="text-4xl md:text-5xl font-bold font-serif text-brand-gold">$<span class="stat-counter" data-target="4.2" data-decimal="true" data-suffix="B">0</span></h3>
+          <p class="text-xs uppercase tracking-wider text-slate-400 mt-2">Advisory Volume</p>
+        </div>
+        <div>
+          <h3 class="text-4xl md:text-5xl font-bold font-serif text-brand-gold"><span class="stat-counter" data-target="120" data-suffix="+">0</span></h3>
+          <p class="text-xs uppercase tracking-wider text-slate-400 mt-2">Closed Transactions</p>
+        </div>
+        <div>
+          <h3 class="text-4xl md:text-5xl font-bold font-serif text-brand-gold"><span class="stat-counter" data-target="99" data-suffix="%">0</span></h3>
+          <p class="text-xs uppercase tracking-wider text-slate-400 mt-2">Success Rate</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 px-6 md:px-12 bg-gradient-to-r from-brand-navy via-brand-midnight to-brand-navy text-white text-center relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-0 right-0 w-80 h-80 bg-brand-gold rounded-full blur-3xl"></div>
+      </div>
+      <div class="max-w-3xl mx-auto relative z-10 space-y-6" data-aos="zoom-in">
+        <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Secure Strategy</span>
+        <h2 class="text-3xl md:text-5xl font-bold font-serif">Planning a Strategic Corporate Transition?</h2>
+        <p class="text-slate-300 text-base max-w-xl mx-auto">
+          Contact our senior advisors in absolute confidence to explore your valuation, potential exit paths, or target market acquisition programs.
+        </p>
+        <div class="pt-4">
+          <a href="contact.html" class="px-8 py-3 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy font-bold uppercase tracking-wider rounded transition shadow-lg">
+            Schedule Confidential Session
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-brand-navy text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800 py-16 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Col 1: Overview -->
+      <div class="space-y-4">
+        <a href="index.html" class="flex items-center space-x-2 text-xl font-bold font-serif text-slate-900 dark:text-white tracking-wider">
+          <img src="logo.png" alt="Aegis Logo" class="h-8 w-auto rounded">
+          <span>AEGIS</span>
+        </a>
+        <p class="text-sm text-slate-400">
+          Premier corporate finance advisors delivering defensible valuations, precise M&A buy-side/sell-side execution, and private equity access for mid-market leaders.
+        </p>
+        <div class="flex space-x-4 rtl:space-x-reverse text-lg text-slate-400">
+          <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Services -->
+      <div>
+        <h4 class="font-bold text-slate-900 dark:text-white font-serif tracking-wider mb-4">Advisory Services</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-brand-gold transition">Business Valuation</a></li>
+          <li><a href="#" class="hover:text-brand-gold transition">Sell-Side M&A</a></li>
+          <li><a href="#" class="hover:text-brand-gold transition">Buy-Side M&A</a></li>
+          <li><a href="#" class="hover:text-brand-gold transition">Exit & Succession Planning</a></li>
+          <li><a href="#" class="hover:text-brand-gold transition">Due Diligence Audit</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Quick Links -->
+      <div>
+        <h4 class="font-bold text-slate-900 dark:text-white font-serif tracking-wider mb-4">Corporate Links</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-brand-gold transition">Home Page 1</a></li>
+          <li><a href="home2.html" class="hover:text-brand-gold transition">Home Page 2</a></li>
+          <li><a href="about.html" class="hover:text-brand-gold transition">About Our Firm</a></li>
+          <li><a href="transactions.html" class="hover:text-brand-gold transition">Transactions</a></li>
+          <li><a href="blog.html" class="hover:text-brand-gold transition">Corporate Insights</a></li>
+          <li><a href="contact.html" class="hover:text-brand-gold transition">Contact Securely</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Newsletter -->
+      <div class="space-y-4">
+        <h4 class="font-bold text-slate-900 dark:text-white font-serif tracking-wider mb-4">Market Insights</h4>
+        <p class="text-sm">Subscribe to receive private transaction insights and mid-market exit briefs. Fully confidential.</p>
+        <form class="validated-form relative flex flex-col space-y-2">
+          <div class="relative">
+            <input type="email" required placeholder="Enter professional email" class="w-full bg-slate-900 border border-slate-700/50 text-white text-xs px-3 py-2.5 rounded focus:outline-none focus:border-brand-gold transition">
+            <span class="error-message text-[10px] text-red-500 block mt-1"></span>
+          </div>
+          <button type="submit" class="bg-brand-gold hover:bg-white text-brand-navy hover:text-brand-navy text-xs font-semibold uppercase tracking-wider py-2.5 rounded transition">
+            Subscribe
+          </button>
+          <div class="form-success-banner hidden text-[11px] text-brand-gold font-semibold mt-2">
+            Successfully subscribed! Check your inbox for security validation.
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom footer details -->
+    <div class="max-w-6xl mx-auto border-t border-slate-200 dark:border-slate-800/80 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500">
+      <p>&copy; 2026 Aegis LLC. All rights reserved. Professional advisory services are governed by engagement terms.</p>
+      <div class="flex space-x-4 rtl:space-x-reverse mt-4 md:mt-0">
+        <a href="#" class="hover:text-slate-300">Privacy Policy</a>
+        <span>&bull;</span>
+        <a href="#" class="hover:text-slate-300">Terms of Engagement</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button id="scroll-to-top" class="fixed bottom-6 right-6 z-40 bg-brand-gold text-brand-navy p-3 rounded-full shadow-lg opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:bg-white" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up text-base"></i>
+  </button>
+
+  <!-- AOS script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+  <!-- Main Script -->
+  <script src="main.js" defer></script>
+</body>
+</html>
