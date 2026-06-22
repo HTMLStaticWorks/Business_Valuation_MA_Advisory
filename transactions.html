@@ -42,7 +42,7 @@
   <!-- AOS (Animate On Scroll) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- FontAwesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="logo.png">
@@ -55,7 +55,7 @@
   </div>
 
   <!-- Header -->
-  <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 w-full py-4 px-4 lg:px-6 xl:px-12 flex items-center justify-between bg-transparent">
+  <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4 px-4 lg:px-6 xl:px-12 flex items-center justify-between bg-transparent">
     <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse" id="header-logo">
       <img src="logo.png" alt="Aegis Logo" class="h-10 w-auto rounded">
       <span class="text-2xl font-bold tracking-wider text-brand-navy dark:text-white font-serif flex items-center">
@@ -109,9 +109,8 @@
 
     <!-- Mobile controls & Hamburger -->
     <div class="flex lg:hidden items-center space-x-2 rtl:space-x-reverse">
-      <button id="hamburger-menu" class="flex items-center space-x-2 px-3 py-2 border border-brand-navy/30 dark:border-white/30 text-brand-navy dark:text-white rounded focus:outline-none hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-expanded="false" aria-label="Toggle mobile menu">
+      <button id="hamburger-menu" class="flex items-center px-3 py-2 border border-brand-navy/30 dark:border-white/30 text-brand-navy dark:text-white rounded focus:outline-none hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-expanded="false" aria-label="Toggle mobile menu">
         <i class="fa-solid fa-bars text-lg" id="hamburger-icon"></i>
-        <span class="text-xs uppercase tracking-wider font-semibold">Menu</span>
       </button>
     </div>
   </header>
@@ -324,21 +323,64 @@
       </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="py-20 px-6 md:px-12 bg-gradient-to-r from-brand-navy via-brand-midnight to-brand-navy text-white text-center relative overflow-hidden">
+    <!-- Call to Action Section / Case Study Request -->
+    <section class="py-20 px-6 md:px-12 bg-gradient-to-r from-brand-navy via-brand-midnight to-brand-navy text-white relative overflow-hidden">
       <div class="absolute inset-0 opacity-10 pointer-events-none">
         <div class="absolute top-0 right-0 w-80 h-80 bg-brand-gold rounded-full blur-3xl"></div>
       </div>
-      <div class="max-w-3xl mx-auto relative z-10 space-y-6" data-aos="zoom-in">
-        <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Secure Strategy</span>
-        <h2 class="text-3xl md:text-5xl font-bold font-serif leading-tight">Ready to Explore Your Transaction Potential?</h2>
-        <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto">
-          Contact our senior advisors in absolute confidence to explore your business valuation, potential exit paths, or target market acquisition programs.
-        </p>
-        <div class="pt-4 max-w-xs mx-auto md:max-w-none">
-          <a href="contact.html" class="flex md:inline-flex items-center justify-center text-center px-8 py-3 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy font-bold uppercase tracking-wider rounded transition shadow-lg text-sm md:text-base leading-normal w-full md:w-auto">
-            Schedule Confidential Session
-          </a>
+      <div class="max-w-6xl mx-auto relative z-10 grid lg:grid-cols-12 gap-12 items-center" data-aos="zoom-in">
+        <!-- Left Column -->
+        <div class="lg:col-span-6 space-y-6 text-left rtl:text-right">
+          <span class="inline-block px-3 py-1 bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-xs font-semibold tracking-widest uppercase rounded-full">
+            Track Record Dossier
+          </span>
+          <h2 class="text-3xl md:text-5xl font-bold font-serif leading-tight">Request Our Complete M&A Deal Portfolio</h2>
+          <p class="text-slate-300 text-base md:text-lg max-w-xl">
+            Gain secure access to detailed, unredacted historical transaction profiles and quality of earnings (QofE) case studies.
+          </p>
+          <div class="flex items-center space-x-3 rtl:space-x-reverse text-xs text-slate-400">
+            <i class="fa-solid fa-file-pdf text-brand-gold"></i>
+            <span>Dossier delivered instantly via secure download link.</span>
+          </div>
+        </div>
+
+        <!-- Right Column (Portfolio Request Form) -->
+        <div class="lg:col-span-6">
+          <div class="glass-panel p-8 rounded-2xl border border-white/10 relative overflow-hidden bg-brand-navy/60 backdrop-blur-md">
+            <!-- Form State -->
+            <form id="portfolio-request-form" class="space-y-4">
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Corporate Web Domain</label>
+                <input type="text" id="portfolio-domain" required placeholder="e.g. firmname.com" class="w-full bg-slate-900 border border-slate-700/80 text-white text-sm rounded px-4 py-2.5 focus:outline-none focus:border-brand-gold transition">
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Professional Email</label>
+                <div class="relative">
+                  <input type="email" id="portfolio-email" required placeholder="Enter professional email" class="w-full bg-slate-900 border border-slate-700/80 text-white text-sm rounded px-4 py-2.5 focus:outline-none focus:border-brand-gold transition">
+                  <span id="portfolio-email-error" class="text-[10px] text-red-500 block mt-1"></span>
+                </div>
+              </div>
+
+              <button type="submit" class="w-full bg-brand-gold hover:bg-white text-brand-navy hover:text-brand-navy text-xs font-bold uppercase tracking-widest py-3 rounded transition duration-300">
+                Request Secure Portfolio
+              </button>
+            </form>
+
+            <!-- Success State (hidden by default) -->
+            <div id="portfolio-success" class="hidden space-y-6 text-center py-6">
+              <div class="w-16 h-16 bg-brand-gold/10 text-brand-gold rounded-full flex items-center justify-center mx-auto text-2xl">
+                <i class="fa-solid fa-file-arrow-down animate-bounce"></i>
+              </div>
+              <div class="space-y-2">
+                <h3 class="text-xl font-bold font-serif text-white">Access Granted</h3>
+                <p class="text-sm text-slate-300">Your secure unredacted transaction dossier is prepared for download.</p>
+              </div>
+              <div class="p-4 bg-brand-gold/5 border border-brand-gold/20 rounded-lg text-xs text-slate-400">
+                A secure access token has been sent to <strong id="portfolio-result-email" class="text-white"></strong>.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

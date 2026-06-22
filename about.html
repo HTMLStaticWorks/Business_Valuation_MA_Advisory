@@ -42,7 +42,7 @@
   <!-- AOS (Animate On Scroll) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- FontAwesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="logo.png">
@@ -55,7 +55,7 @@
   </div>
 
   <!-- Header -->
-  <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 w-full py-4 px-4 lg:px-6 xl:px-12 flex items-center justify-between bg-transparent">
+  <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4 px-4 lg:px-6 xl:px-12 flex items-center justify-between bg-transparent">
     <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse" id="header-logo">
       <img src="logo.png" alt="Aegis Logo" class="h-10 w-auto rounded">
       <span class="text-2xl font-bold tracking-wider text-brand-navy dark:text-white font-serif flex items-center">
@@ -109,9 +109,8 @@
 
     <!-- Mobile controls & Hamburger -->
     <div class="flex lg:hidden items-center space-x-2 rtl:space-x-reverse">
-      <button id="hamburger-menu" class="flex items-center space-x-2 px-3 py-2 border border-brand-navy/30 dark:border-white/30 text-brand-navy dark:text-white rounded focus:outline-none hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-expanded="false" aria-label="Toggle mobile menu">
+      <button id="hamburger-menu" class="flex items-center px-3 py-2 border border-brand-navy/30 dark:border-white/30 text-brand-navy dark:text-white rounded focus:outline-none hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-expanded="false" aria-label="Toggle mobile menu">
         <i class="fa-solid fa-bars text-lg" id="hamburger-icon"></i>
-        <span class="text-xs uppercase tracking-wider font-semibold">Menu</span>
       </button>
     </div>
   </header>
@@ -215,7 +214,7 @@
           <!-- Leader 1 -->
           <div class="bg-slate-50 dark:bg-brand-midnight rounded-xl overflow-hidden shadow-lg border border-slate-200/50 dark:border-slate-800/50 group flex flex-col h-full" data-aos="fade-up">
             <div class="relative overflow-hidden h-72 flex-shrink-0">
-              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="Executive Managing Partner" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition duration-500">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Executive Managing Partner" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-brand-navy to-transparent opacity-0 group-hover:opacity-80 transition duration-300 flex items-end justify-center p-6">
                 <div class="flex space-x-4 text-white text-lg">
                   <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-linkedin"></i></a>
@@ -225,8 +224,12 @@
             </div>
             <div class="p-6 text-center flex-grow flex flex-col justify-between">
               <div>
-                <h4 class="font-bold font-serif text-lg text-slate-900 dark:text-white">Arthur Pendelton, CFA</h4>
-                <p class="text-xs text-brand-gold uppercase tracking-wider mt-1">Managing Partner & Founder</p>
+                <div class="md:min-h-[56px] flex items-center justify-center">
+                  <h4 class="font-bold font-serif text-lg text-slate-900 dark:text-white">Arthur Pendelton, CFA</h4>
+                </div>
+                <div class="md:min-h-[32px] flex items-center justify-center mt-1">
+                  <p class="text-xs text-brand-gold uppercase tracking-wider">Managing Partner & Founder</p>
+                </div>
               </div>
               <p class="text-slate-500 text-xs mt-3 flex-grow">25+ Years investment banking. Managed over $2B in mid-market transaction volumes across manufacturing and energy.</p>
             </div>
@@ -245,8 +248,12 @@
             </div>
             <div class="p-6 text-center flex-grow flex flex-col justify-between">
               <div>
-                <h4 class="font-bold font-serif text-lg text-slate-900 dark:text-white">Elizabeth Sterling</h4>
-                <p class="text-xs text-brand-gold uppercase tracking-wider mt-1">Managing Partner - M&A Advisory</p>
+                <div class="md:min-h-[56px] flex items-center justify-center">
+                  <h4 class="font-bold font-serif text-lg text-slate-900 dark:text-white">Elizabeth Sterling</h4>
+                </div>
+                <div class="md:min-h-[32px] flex items-center justify-center mt-1">
+                  <p class="text-xs text-brand-gold uppercase tracking-wider">Managing Partner - M&A Advisory</p>
+                </div>
               </div>
               <p class="text-slate-500 text-xs mt-3 flex-grow">Ex-Wall Street Director. Specialized in SaaS, telecom, and healthcare tech rollups and strategic market acquisitions.</p>
             </div>
@@ -265,8 +272,12 @@
             </div>
             <div class="p-6 text-center flex-grow flex flex-col justify-between">
               <div>
-                <h4 class="font-bold font-serif text-lg text-slate-900 dark:text-white">Marcus Vance, ASA</h4>
-                <p class="text-xs text-brand-gold uppercase tracking-wider mt-1">Director of Valuation Audits</p>
+                <div class="md:min-h-[56px] flex items-center justify-center">
+                  <h4 class="font-bold font-serif text-lg text-slate-900 dark:text-white">Marcus Vance, ASA</h4>
+                </div>
+                <div class="md:min-h-[32px] flex items-center justify-center mt-1">
+                  <p class="text-xs text-brand-gold uppercase tracking-wider">Director of Valuation Audits</p>
+                </div>
               </div>
               <p class="text-slate-500 text-xs mt-3 flex-grow">Senior Accredited Appraiser. Published authority on complex asset recasting and defensive IRS estate appraisal filings.</p>
             </div>
@@ -330,25 +341,6 @@
         <div>
           <h3 class="text-4xl md:text-5xl font-bold font-serif text-brand-gold"><span class="stat-counter" data-target="99" data-suffix="%">0</span></h3>
           <p class="text-xs uppercase tracking-wider text-slate-400 mt-2">Success Rate</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="py-20 px-6 md:px-12 bg-gradient-to-r from-brand-navy via-brand-midnight to-brand-navy text-white text-center relative overflow-hidden">
-      <div class="absolute inset-0 opacity-10 pointer-events-none">
-        <div class="absolute top-0 right-0 w-80 h-80 bg-brand-gold rounded-full blur-3xl"></div>
-      </div>
-      <div class="max-w-3xl mx-auto relative z-10 space-y-6" data-aos="zoom-in">
-        <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Secure Strategy</span>
-        <h2 class="text-3xl md:text-5xl font-bold font-serif leading-tight">Ready to Partner with Aegis?</h2>
-        <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto">
-          Contact our managing directors in absolute confidence to explore your business valuation, strategic exit timeline, or expansion goals.
-        </p>
-        <div class="pt-4 max-w-xs mx-auto md:max-w-none">
-          <a href="contact.html" class="flex md:inline-flex items-center justify-center text-center px-8 py-3 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy font-bold uppercase tracking-wider rounded transition shadow-lg text-sm md:text-base leading-normal w-full md:w-auto">
-            Schedule Confidential Session
-          </a>
         </div>
       </div>
     </section>

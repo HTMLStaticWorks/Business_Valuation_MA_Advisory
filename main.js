@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initAccordion();
   initFormValidation();
   initActiveNavLink();
+  initValuationEstimator();
+  initCallbackForm();
+  initBuyerRegistration();
+  initPortfolioRequest();
+  initMarketBriefs();
 });
 
 // Theme Management
@@ -391,8 +396,9 @@ function validateEmail(email) {
 // Active Nav Link Highlighting
 function initActiveNavLink() {
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.nav-link');
   
+  // Desktop navigation links
+  const navLinks = document.querySelectorAll('.nav-link');
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (href === currentPath) {
@@ -406,5 +412,210 @@ function initActiveNavLink() {
         indicator.classList.add('scale-x-100');
       }
     }
+  });
+
+  // Mobile & tablet navigation links (inside hamburger menu)
+  const mobileNav = document.getElementById('mobile-nav');
+  if (mobileNav) {
+    const mobileLinks = mobileNav.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === currentPath) {
+        link.classList.add('text-[#c5a880]', 'font-bold');
+        link.classList.remove('text-white');
+      }
+    });
+  }
+}
+
+// Interactive Valuation Multiple Estimator
+function initValuationEstimator() {
+  const forms = document.querySelectorAll('.valuation-estimator-form');
+  forms.forEach(form => {
+    const revenueSelect = form.querySelector('.estimator-revenue');
+    const sectorSelect = form.querySelector('.estimator-sector');
+    const emailInput = form.querySelector('.estimator-email');
+    const emailError = form.querySelector('.estimator-email-error');
+    const resultDiv = form.nextElementSibling;
+    
+    if (!revenueSelect || !sectorSelect || !emailInput || !resultDiv) return;
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const email = emailInput.value.trim();
+      if (!validateEmail(email)) {
+        if (emailError) emailError.textContent = 'Please enter a valid professional email address';
+        emailInput.classList.add('border-red-500');
+        return;
+      } else {
+        if (emailError) emailError.textContent = '';
+        emailInput.classList.remove('border-red-500');
+      }
+
+      const revenue = revenueSelect.value;
+      const sector = sectorSelect.value;
+      
+      let multipleRange = "6.0x - 8.0x";
+      if (sector === 'tech') {
+        if (revenue === '5-20') multipleRange = "7.5x - 9.5x";
+        else if (revenue === '20-50') multipleRange = "9.0x - 11.5x";
+        else if (revenue === '50-100') multipleRange = "11.0x - 14.0x";
+        else if (revenue === '100-250') multipleRange = "13.5x - 16.5x";
+        else multipleRange = "15.5x - 18.5x";
+      } else if (sector === 'health') {
+        if (revenue === '5-20') multipleRange = "6.5x - 8.5x";
+        else if (revenue === '20-50') multipleRange = "8.0x - 10.5x";
+        else if (revenue === '50-100') multipleRange = "10.0x - 12.5x";
+        else if (revenue === '100-250') multipleRange = "12.0x - 14.5x";
+        else multipleRange = "13.5x - 16.0x";
+      } else if (sector === 'manufacturing') {
+        if (revenue === '5-20') multipleRange = "5.5x - 7.0x";
+        else if (revenue === '20-50') multipleRange = "6.5x - 8.5x";
+        else if (revenue === '50-100') multipleRange = "8.0x - 10.0x";
+        else if (revenue === '100-250') multipleRange = "9.5x - 11.5x";
+        else multipleRange = "10.5x - 13.0x";
+      } else if (sector === 'energy') {
+        if (revenue === '5-20') multipleRange = "6.0x - 7.5x";
+        else if (revenue === '20-50') multipleRange = "7.0x - 9.0x";
+        else if (revenue === '50-100') multipleRange = "8.5x - 11.0x";
+        else if (revenue === '100-250') multipleRange = "10.0x - 12.5x";
+        else multipleRange = "11.5x - 14.0x";
+      } else {
+        if (revenue === '5-20') multipleRange = "4.5x - 6.0x";
+        else if (revenue === '20-50') multipleRange = "5.5x - 7.5x";
+        else if (revenue === '50-100') multipleRange = "7.0x - 9.0x";
+        else if (revenue === '100-250') multipleRange = "8.5x - 10.5x";
+        else multipleRange = "9.5x - 12.0x";
+      }
+
+      const rangeEl = resultDiv.querySelector('.estimator-multiple-range');
+      const sectorEl = resultDiv.querySelector('.estimator-result-sector');
+      const emailEl = resultDiv.querySelector('.estimator-result-email');
+      
+      if (rangeEl) rangeEl.textContent = `${multipleRange} EBITDA`;
+      if (sectorEl) {
+        const sectorText = sectorSelect.options[sectorSelect.selectedIndex].text;
+        sectorEl.textContent = sectorText;
+      }
+      if (emailEl) emailEl.textContent = email;
+
+      form.classList.add('hidden');
+      resultDiv.classList.remove('hidden');
+    });
+
+    const resetBtn = resultDiv.querySelector('.estimator-reset-btn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        form.reset();
+        resultDiv.classList.add('hidden');
+        form.classList.remove('hidden');
+      });
+    }
+  });
+}
+
+// Callback request form logic
+function initCallbackForm() {
+  const form = document.getElementById('callback-inquiry-form');
+  const successDiv = document.getElementById('callback-success');
+  if (!form || !successDiv) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('callback-name').value.trim();
+    const phone = document.getElementById('callback-phone').value.trim();
+    const timeSelect = document.getElementById('callback-time');
+    const timeText = timeSelect.options[timeSelect.selectedIndex].text;
+
+    document.getElementById('callback-result-name').textContent = name;
+    document.getElementById('callback-result-phone').textContent = phone;
+    document.getElementById('callback-result-time').textContent = timeText;
+
+    form.classList.add('hidden');
+    successDiv.classList.remove('hidden');
+  });
+}
+
+// Buyer registration form logic
+function initBuyerRegistration() {
+  const form = document.getElementById('buyer-registration-form');
+  const successDiv = document.getElementById('buyer-success');
+  const emailInput = document.getElementById('buyer-email');
+  const emailError = document.getElementById('buyer-email-error');
+  if (!form || !successDiv || !emailInput) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+    if (!validateEmail(email)) {
+      if (emailError) emailError.textContent = 'Please enter a valid corporate email address';
+      emailInput.classList.add('border-red-500');
+      return;
+    } else {
+      if (emailError) emailError.textContent = '';
+      emailInput.classList.remove('border-red-500');
+    }
+
+    const institution = document.getElementById('buyer-institution').value.trim();
+    document.getElementById('buyer-result-institution').textContent = institution;
+    document.getElementById('buyer-result-email').textContent = email;
+
+    form.classList.add('hidden');
+    successDiv.classList.remove('hidden');
+  });
+}
+
+// Portfolio Request Form logic
+function initPortfolioRequest() {
+  const form = document.getElementById('portfolio-request-form');
+  const successDiv = document.getElementById('portfolio-success');
+  const emailInput = document.getElementById('portfolio-email');
+  const emailError = document.getElementById('portfolio-email-error');
+  if (!form || !successDiv || !emailInput) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+    if (!validateEmail(email)) {
+      if (emailError) emailError.textContent = 'Please enter a valid professional email address';
+      emailInput.classList.add('border-red-500');
+      return;
+    } else {
+      if (emailError) emailError.textContent = '';
+      emailInput.classList.remove('border-red-500');
+    }
+
+    document.getElementById('portfolio-result-email').textContent = email;
+
+    form.classList.add('hidden');
+    successDiv.classList.remove('hidden');
+  });
+}
+
+// Market briefs newsletter logic
+function initMarketBriefs() {
+  const form = document.getElementById('market-briefs-form');
+  const successDiv = document.getElementById('briefs-success');
+  const emailInput = document.getElementById('briefs-email');
+  const emailError = document.getElementById('briefs-email-error');
+  if (!form || !successDiv || !emailInput) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+    if (!validateEmail(email)) {
+      if (emailError) emailError.textContent = 'Please enter a valid professional email address';
+      emailInput.classList.add('border-red-500');
+      return;
+    } else {
+      if (emailError) emailError.textContent = '';
+      emailInput.classList.remove('border-red-500');
+    }
+
+    document.getElementById('briefs-result-email').textContent = email;
+
+    form.classList.add('hidden');
+    successDiv.classList.remove('hidden');
   });
 }
