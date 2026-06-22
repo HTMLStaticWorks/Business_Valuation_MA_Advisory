@@ -85,15 +85,18 @@ function initStickyHeader() {
   const header = document.getElementById('header');
   if (!header) return;
 
-  window.addEventListener('scroll', () => {
+  const handleScroll = () => {
     if (window.scrollY > 20) {
-      header.classList.add('bg-opacity-80', 'backdrop-blur-md', 'shadow-lg', 'border-b', 'border-slate-200/10');
+      header.classList.add('scrolled', 'bg-opacity-80', 'backdrop-blur-md', 'shadow-lg', 'border-b', 'border-slate-200/10');
       header.classList.remove('bg-transparent');
     } else {
-      header.classList.remove('bg-opacity-80', 'backdrop-blur-md', 'shadow-lg', 'border-b', 'border-slate-200/10');
+      header.classList.remove('scrolled', 'bg-opacity-80', 'backdrop-blur-md', 'shadow-lg', 'border-b', 'border-slate-200/10');
       header.classList.add('bg-transparent');
     }
-  });
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Run on initial load/refresh
 }
 
 // Mobile Hamburger Menu
@@ -108,17 +111,15 @@ function initMobileMenu() {
     mobileNav.classList.toggle('hidden');
     mobileNav.classList.toggle('flex');
     
-    // Toggle hamburger icon animation
-    const iconLines = hamburger.querySelectorAll('span');
-    if (iconLines.length >= 3) {
+    // Toggle icon if FontAwesome class is present
+    const icon = hamburger.querySelector('#hamburger-icon');
+    if (icon) {
       if (!isExpanded) {
-        iconLines[0].classList.add('rotate-45', 'translate-y-2');
-        iconLines[1].classList.add('opacity-0');
-        iconLines[2].classList.add('-rotate-45', '-translate-y-2');
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
       } else {
-        iconLines[0].classList.remove('rotate-45', 'translate-y-2');
-        iconLines[1].classList.remove('opacity-0');
-        iconLines[2].classList.remove('-rotate-45', '-translate-y-2');
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
       }
     }
   });

@@ -47,7 +47,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="logo.png">
 </head>
-<body class="bg-slate-50 dark:bg-brand-navy text-slate-800 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
+<body class="about-page bg-slate-50 dark:bg-brand-navy text-slate-800 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
 
   <!-- Scroll Progress Bar -->
   <div class="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-royal via-brand-teal to-brand-gold z-50">
@@ -55,7 +55,7 @@
   </div>
 
   <!-- Header -->
-  <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 w-full py-4 px-6 md:px-12 flex items-center justify-between bg-transparent">
+  <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 w-full py-4 px-4 lg:px-6 xl:px-12 flex items-center justify-between bg-transparent">
     <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse" id="header-logo">
       <img src="logo.png" alt="Aegis Logo" class="h-10 w-auto rounded">
       <span class="text-2xl font-bold tracking-wider text-brand-navy dark:text-white font-serif flex items-center">
@@ -64,7 +64,7 @@
     </a>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden lg:flex items-center space-x-8 rtl:space-x-reverse font-sans text-sm uppercase tracking-wider">
+    <nav class="hidden lg:flex items-center space-x-4 xl:space-x-8 rtl:space-x-reverse font-sans text-sm uppercase tracking-wider">
       <a href="index.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         Home 1
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
@@ -73,7 +73,7 @@
         Home 2
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
-      <a href="about.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+      <a href="about.html" class="nav-link active relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         About
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
@@ -92,7 +92,7 @@
     </nav>
 
     <!-- Toolbar controls -->
-    <div class="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
+    <div class="hidden lg:flex items-center space-x-2 xl:space-x-4 rtl:space-x-reverse">
       <!-- Theme Toggle -->
       <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-300/30 dark:border-white/10 text-brand-navy dark:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-label="Toggle theme">
         <i class="fa-solid fa-sun sun-icon hidden text-brand-gold text-sm"></i>
@@ -109,16 +109,9 @@
 
     <!-- Mobile controls & Hamburger -->
     <div class="flex lg:hidden items-center space-x-2 rtl:space-x-reverse">
-      <button id="theme-toggle-mobile" class="p-2 text-brand-navy dark:text-slate-300" onclick="document.getElementById('theme-toggle').click()">
-        <i class="fa-solid fa-circle-half-stroke"></i>
-      </button>
-      <button id="rtl-toggle-mobile" class="px-2 py-0.5 text-xs rounded border border-brand-navy/30 dark:border-white/30 text-brand-navy dark:text-slate-300" onclick="document.getElementById('rtl-toggle').click()">
-        RTL
-      </button>
-      <button id="hamburger-menu" class="p-2 focus:outline-none flex flex-col justify-between w-6 h-5" aria-expanded="false" aria-label="Toggle mobile menu">
-        <span class="w-full h-0.5 bg-brand-navy dark:bg-white transition-all duration-300"></span>
-        <span class="w-full h-0.5 bg-brand-navy dark:bg-white transition-all duration-300"></span>
-        <span class="w-full h-0.5 bg-brand-navy dark:bg-white transition-all duration-300"></span>
+      <button id="hamburger-menu" class="flex items-center space-x-2 px-3 py-2 border border-brand-navy/30 dark:border-white/30 text-brand-navy dark:text-white rounded focus:outline-none hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-expanded="false" aria-label="Toggle mobile menu">
+        <i class="fa-solid fa-bars text-lg" id="hamburger-icon"></i>
+        <span class="text-xs uppercase tracking-wider font-semibold">Menu</span>
       </button>
     </div>
   </header>
@@ -133,6 +126,18 @@
     <a href="contact.html" class="hover:text-brand-gold transition duration-300">Contact</a>
     <div class="h-[1px] w-24 bg-brand-gold/40"></div>
     <a href="signup.html" class="px-6 py-2.5 bg-brand-gold text-brand-navy font-semibold text-sm rounded hover:bg-white transition">Sign Up</a>
+    
+    <div class="h-[1px] w-24 bg-brand-gold/40"></div>
+    <div class="flex items-center space-x-6 mt-4">
+      <!-- Mobile Theme Toggle -->
+      <button id="theme-toggle-mobile" class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-white/10 transition" onclick="document.getElementById('theme-toggle').click()" aria-label="Toggle theme">
+        <i class="fa-solid fa-circle-half-stroke text-lg"></i>
+      </button>
+      <!-- Mobile RTL Toggle -->
+      <button id="rtl-toggle-mobile" class="w-12 h-12 flex items-center justify-center text-sm font-bold rounded-full border border-white/20 text-white hover:bg-white/10 transition" onclick="document.getElementById('rtl-toggle').click()" aria-label="Toggle text direction">
+        RTL
+      </button>
+    </div>
   </div>
 
   <main class="flex-grow pt-20">
@@ -208,9 +213,9 @@
 
         <div class="grid md:grid-cols-3 gap-8">
           <!-- Leader 1 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight rounded-xl overflow-hidden shadow-lg border border-slate-200/50 dark:border-slate-800/50 group" data-aos="fade-up">
-            <div class="relative overflow-hidden h-72">
-              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="Executive Managing Partner" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+          <div class="bg-slate-50 dark:bg-brand-midnight rounded-xl overflow-hidden shadow-lg border border-slate-200/50 dark:border-slate-800/50 group flex flex-col h-full" data-aos="fade-up">
+            <div class="relative overflow-hidden h-72 flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="Executive Managing Partner" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-brand-navy to-transparent opacity-0 group-hover:opacity-80 transition duration-300 flex items-end justify-center p-6">
                 <div class="flex space-x-4 text-white text-lg">
                   <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-linkedin"></i></a>
@@ -218,17 +223,19 @@
                 </div>
               </div>
             </div>
-            <div class="p-6 text-center">
-              <h4 class="font-bold font-serif text-lg text-slate-900 dark:text-white">Arthur Pendelton, CFA</h4>
-              <p class="text-xs text-brand-gold uppercase tracking-wider mt-1">Managing Partner & Founder</p>
-              <p class="text-slate-500 text-xs mt-3">25+ Years investment banking. Managed over $2B in mid-market transaction volumes across manufacturing and energy.</p>
+            <div class="p-6 text-center flex-grow flex flex-col justify-between">
+              <div>
+                <h4 class="font-bold font-serif text-lg text-slate-900 dark:text-white">Arthur Pendelton, CFA</h4>
+                <p class="text-xs text-brand-gold uppercase tracking-wider mt-1">Managing Partner & Founder</p>
+              </div>
+              <p class="text-slate-500 text-xs mt-3 flex-grow">25+ Years investment banking. Managed over $2B in mid-market transaction volumes across manufacturing and energy.</p>
             </div>
           </div>
 
           <!-- Leader 2 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight rounded-xl overflow-hidden shadow-lg border border-slate-200/50 dark:border-slate-800/50 group" data-aos="fade-up" data-aos-delay="100">
-            <div class="relative overflow-hidden h-72">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="M&A Managing Partner" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+          <div class="bg-slate-50 dark:bg-brand-midnight rounded-xl overflow-hidden shadow-lg border border-slate-200/50 dark:border-slate-800/50 group flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative overflow-hidden h-72 flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="M&A Managing Partner" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-brand-navy to-transparent opacity-0 group-hover:opacity-80 transition duration-300 flex items-end justify-center p-6">
                 <div class="flex space-x-4 text-white text-lg">
                   <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-linkedin"></i></a>
@@ -236,17 +243,19 @@
                 </div>
               </div>
             </div>
-            <div class="p-6 text-center">
-              <h4 class="font-bold font-serif text-lg text-slate-900 dark:text-white">Elizabeth Sterling</h4>
-              <p class="text-xs text-brand-gold uppercase tracking-wider mt-1">Managing Partner - M&A Advisory</p>
-              <p class="text-slate-500 text-xs mt-3">Ex-Wall Street Director. Specialized in SaaS, telecom, and healthcare tech rollups and strategic market acquisitions.</p>
+            <div class="p-6 text-center flex-grow flex flex-col justify-between">
+              <div>
+                <h4 class="font-bold font-serif text-lg text-slate-900 dark:text-white">Elizabeth Sterling</h4>
+                <p class="text-xs text-brand-gold uppercase tracking-wider mt-1">Managing Partner - M&A Advisory</p>
+              </div>
+              <p class="text-slate-500 text-xs mt-3 flex-grow">Ex-Wall Street Director. Specialized in SaaS, telecom, and healthcare tech rollups and strategic market acquisitions.</p>
             </div>
           </div>
 
           <!-- Leader 3 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight rounded-xl overflow-hidden shadow-lg border border-slate-200/50 dark:border-slate-800/50 group" data-aos="fade-up" data-aos-delay="200">
-            <div class="relative overflow-hidden h-72">
-              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80" alt="Valuation Director" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+          <div class="bg-slate-50 dark:bg-brand-midnight rounded-xl overflow-hidden shadow-lg border border-slate-200/50 dark:border-slate-800/50 group flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative overflow-hidden h-72 flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80" alt="Valuation Director" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-brand-navy to-transparent opacity-0 group-hover:opacity-80 transition duration-300 flex items-end justify-center p-6">
                 <div class="flex space-x-4 text-white text-lg">
                   <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-linkedin"></i></a>
@@ -254,10 +263,12 @@
                 </div>
               </div>
             </div>
-            <div class="p-6 text-center">
-              <h4 class="font-bold font-serif text-lg text-slate-900 dark:text-white">Marcus Vance, ASA</h4>
-              <p class="text-xs text-brand-gold uppercase tracking-wider mt-1">Director of Valuation Audits</p>
-              <p class="text-slate-500 text-xs mt-3">Senior Accredited Appraiser. Published authority on complex asset recasting and defensive IRS estate appraisal filings.</p>
+            <div class="p-6 text-center flex-grow flex flex-col justify-between">
+              <div>
+                <h4 class="font-bold font-serif text-lg text-slate-900 dark:text-white">Marcus Vance, ASA</h4>
+                <p class="text-xs text-brand-gold uppercase tracking-wider mt-1">Director of Valuation Audits</p>
+              </div>
+              <p class="text-slate-500 text-xs mt-3 flex-grow">Senior Accredited Appraiser. Published authority on complex asset recasting and defensive IRS estate appraisal filings.</p>
             </div>
           </div>
         </div>
@@ -273,7 +284,7 @@
           <div class="w-16 h-1 bg-brand-gold mx-auto mt-4"></div>
         </div>
 
-        <div class="grid md:grid-cols-4 gap-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div class="p-6 bg-white dark:bg-brand-navy rounded-xl border border-slate-200/50 dark:border-slate-800/50 shadow relative">
             <span class="text-5xl font-bold font-serif text-brand-gold/10 absolute top-4 right-4">01</span>
             <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white mb-2">Audit Engagement</h4>
@@ -330,12 +341,12 @@
       </div>
       <div class="max-w-3xl mx-auto relative z-10 space-y-6" data-aos="zoom-in">
         <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Secure Strategy</span>
-        <h2 class="text-3xl md:text-5xl font-bold font-serif">Planning a Strategic Corporate Transition?</h2>
-        <p class="text-slate-300 text-base max-w-xl mx-auto">
-          Contact our senior advisors in absolute confidence to explore your valuation, potential exit paths, or target market acquisition programs.
+        <h2 class="text-3xl md:text-5xl font-bold font-serif leading-tight">Ready to Partner with Aegis?</h2>
+        <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto">
+          Contact our managing directors in absolute confidence to explore your business valuation, strategic exit timeline, or expansion goals.
         </p>
-        <div class="pt-4">
-          <a href="contact.html" class="px-8 py-3 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy font-bold uppercase tracking-wider rounded transition shadow-lg">
+        <div class="pt-4 max-w-xs mx-auto md:max-w-none">
+          <a href="contact.html" class="flex md:inline-flex items-center justify-center text-center px-8 py-3 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy font-bold uppercase tracking-wider rounded transition shadow-lg text-sm md:text-base leading-normal w-full md:w-auto">
             Schedule Confidential Session
           </a>
         </div>
@@ -345,7 +356,7 @@
 
   <!-- Footer -->
   <footer class="bg-white dark:bg-brand-navy text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800 py-16 px-6 md:px-12">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- Col 1: Overview -->
       <div class="space-y-4">
         <a href="index.html" class="flex items-center space-x-2 text-xl font-bold font-serif text-slate-900 dark:text-white tracking-wider">

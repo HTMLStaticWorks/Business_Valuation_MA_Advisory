@@ -121,3 +121,122 @@ h1, h2, h3, h4, .font-serif {
 [dir="rtl"] #scroll-progress {
   transform-origin: right;
 }
+
+/* Sticky Header Styles */
+#header {
+  transition: background-color 0.3s, border-color 0.3s, backdrop-filter 0.3s, box-shadow 0.3s;
+}
+
+/* When scrolled, add background */
+#header.scrolled {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark #header.scrolled {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Global Dark Mode overrides for pure black backgrounds */
+html.dark,
+.dark body {
+  background-color: #000000 !important;
+}
+
+/* Base backgrounds */
+.dark .bg-brand-navy,
+.dark .dark\:bg-brand-navy,
+.dark [class*="bg-brand-navy"],
+.dark [class*="dark:bg-brand-navy"] {
+  background-color: #000000 !important;
+}
+
+/* Secondary dark background (Midnight) becomes slightly elevated black for layout hierarchy */
+.dark .bg-brand-midnight,
+.dark .dark\:bg-brand-midnight,
+.dark [class*="bg-brand-midnight"],
+.dark [class*="dark:bg-brand-midnight"] {
+  background-color: #080808 !important;
+}
+
+/* Card components like tombstones, blog articles, testimonial slides, accordions, etc. */
+.dark .bg-slate-50,
+.dark .dark\:bg-brand-midnight,
+.dark .bg-white {
+  background-color: #080808 !important;
+}
+
+.dark .glass-panel {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark footer {
+  background-color: #000000 !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #030303 !important;
+}
+
+/* Hero section gradients override in dark mode */
+.dark section[style*="hero1.png"],
+.dark div[style*="hero1.png"] {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('hero1.png') !important;
+}
+.dark section[style*="hero2.png"],
+.dark div[style*="hero2.png"] {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('hero2.png') !important;
+}
+.dark section[style*="hero_about.png"],
+.dark div[style*="hero_about.png"] {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('hero_about.png') !important;
+}
+.dark section[style*="hero_blog.png"],
+.dark div[style*="hero_blog.png"] {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('hero_blog.png') !important;
+}
+.dark section[style*="hero_contact.png"],
+.dark div[style*="hero_contact.png"] {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('hero_contact.png') !important;
+}
+.dark section[style*="hero_transactions.png"],
+.dark div[style*="hero_transactions.png"] {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('hero_transactions.png') !important;
+}
+
+/* Custom Tailwind utility override for home2.html hero middle gradient color */
+.dark .via-\[\#0c1f35\] {
+  --tw-gradient-to: rgba(0, 0, 0, 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), #030303 var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
+}
+
+/* About Page Font Weight Overrides */
+.about-page p,
+.about-page span:not(.nav-indicator):not(.fa-solid):not(.fa-brands),
+.about-page li,
+.about-page div:not(#header):not(#mobile-nav):not(footer):not(.fixed) {
+  font-weight: 500 !important;
+}
+
+.about-page h1,
+.about-page h2,
+.about-page h3,
+.about-page h4,
+.about-page h5,
+.about-page h6 {
+  font-weight: 700 !important;
+}
+
+.about-page header *,
+.about-page footer *,
+.about-page #mobile-nav * {
+  font-weight: inherit !important;
+}

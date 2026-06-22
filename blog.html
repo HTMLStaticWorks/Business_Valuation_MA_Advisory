@@ -55,7 +55,7 @@
   </div>
 
   <!-- Header -->
-  <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 w-full py-4 px-6 md:px-12 flex items-center justify-between bg-transparent">
+  <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 w-full py-4 px-4 lg:px-6 xl:px-12 flex items-center justify-between bg-transparent">
     <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse" id="header-logo">
       <img src="logo.png" alt="Aegis Logo" class="h-10 w-auto rounded">
       <span class="text-2xl font-bold tracking-wider text-brand-navy dark:text-white font-serif flex items-center">
@@ -64,7 +64,7 @@
     </a>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden lg:flex items-center space-x-8 rtl:space-x-reverse font-sans text-sm uppercase tracking-wider">
+    <nav class="hidden lg:flex items-center space-x-4 xl:space-x-8 rtl:space-x-reverse font-sans text-sm uppercase tracking-wider">
       <a href="index.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         Home 1
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
@@ -81,7 +81,7 @@
         Transactions
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
-      <a href="blog.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+      <a href="blog.html" class="nav-link active relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         Blog
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
@@ -92,7 +92,7 @@
     </nav>
 
     <!-- Toolbar controls -->
-    <div class="hidden lg:flex items-center space-x-4 rtl:space-x-reverse">
+    <div class="hidden lg:flex items-center space-x-2 xl:space-x-4 rtl:space-x-reverse">
       <!-- Theme Toggle -->
       <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-300/30 dark:border-white/10 text-brand-navy dark:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-label="Toggle theme">
         <i class="fa-solid fa-sun sun-icon hidden text-brand-gold text-sm"></i>
@@ -109,16 +109,9 @@
 
     <!-- Mobile controls & Hamburger -->
     <div class="flex lg:hidden items-center space-x-2 rtl:space-x-reverse">
-      <button id="theme-toggle-mobile" class="p-2 text-brand-navy dark:text-slate-300" onclick="document.getElementById('theme-toggle').click()">
-        <i class="fa-solid fa-circle-half-stroke"></i>
-      </button>
-      <button id="rtl-toggle-mobile" class="px-2 py-0.5 text-xs rounded border border-brand-navy/30 dark:border-white/30 text-brand-navy dark:text-slate-300" onclick="document.getElementById('rtl-toggle').click()">
-        RTL
-      </button>
-      <button id="hamburger-menu" class="p-2 focus:outline-none flex flex-col justify-between w-6 h-5" aria-expanded="false" aria-label="Toggle mobile menu">
-        <span class="w-full h-0.5 bg-brand-navy dark:bg-white transition-all duration-300"></span>
-        <span class="w-full h-0.5 bg-brand-navy dark:bg-white transition-all duration-300"></span>
-        <span class="w-full h-0.5 bg-brand-navy dark:bg-white transition-all duration-300"></span>
+      <button id="hamburger-menu" class="flex items-center space-x-2 px-3 py-2 border border-brand-navy/30 dark:border-white/30 text-brand-navy dark:text-white rounded focus:outline-none hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-expanded="false" aria-label="Toggle mobile menu">
+        <i class="fa-solid fa-bars text-lg" id="hamburger-icon"></i>
+        <span class="text-xs uppercase tracking-wider font-semibold">Menu</span>
       </button>
     </div>
   </header>
@@ -133,6 +126,18 @@
     <a href="contact.html" class="hover:text-brand-gold transition duration-300">Contact</a>
     <div class="h-[1px] w-24 bg-brand-gold/40"></div>
     <a href="signup.html" class="px-6 py-2.5 bg-brand-gold text-brand-navy font-semibold text-sm rounded hover:bg-white transition">Sign Up</a>
+    
+    <div class="h-[1px] w-24 bg-brand-gold/40"></div>
+    <div class="flex items-center space-x-6 mt-4">
+      <!-- Mobile Theme Toggle -->
+      <button id="theme-toggle-mobile" class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-white/10 transition" onclick="document.getElementById('theme-toggle').click()" aria-label="Toggle theme">
+        <i class="fa-solid fa-circle-half-stroke text-lg"></i>
+      </button>
+      <!-- Mobile RTL Toggle -->
+      <button id="rtl-toggle-mobile" class="w-12 h-12 flex items-center justify-center text-sm font-bold rounded-full border border-white/20 text-white hover:bg-white/10 transition" onclick="document.getElementById('rtl-toggle').click()" aria-label="Toggle text direction">
+        RTL
+      </button>
+    </div>
   </div>
 
   <main class="flex-grow pt-20">
@@ -161,7 +166,7 @@
       <div class="max-w-6xl mx-auto">
         <div class="bg-slate-50 dark:bg-brand-midnight rounded-2xl overflow-hidden border border-slate-200/50 dark:border-slate-800/50 shadow-xl grid lg:grid-cols-12 gap-0 group" data-aos="fade-up">
           <div class="lg:col-span-7 relative overflow-hidden h-[300px] lg:h-auto min-h-[300px]">
-            <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1200&q=80" alt="Market data review" class="w-full h-full object-cover transform group-hover:scale-102 transition duration-500">
+            <img src="blog_cross_border_mna.png" alt="Market data review" class="w-full h-full object-cover transform group-hover:scale-102 transition duration-500">
           </div>
           <div class="lg:col-span-5 p-8 md:p-12 flex flex-col justify-between">
             <div class="space-y-4">
@@ -186,29 +191,81 @@
       </div>
     </section>
 
+    <!-- Aegis Insights Mission (Supporting Content) -->
+    <section class="py-16 px-6 md:px-12 bg-white dark:bg-brand-navy border-t border-slate-100 dark:border-slate-800 transition-colors">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-6 space-y-6" data-aos="fade-right">
+            <span class="text-brand-gold text-xs font-bold uppercase tracking-widest">Our Advisory Philosophy</span>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 dark:text-white leading-tight">
+              Intellectual Capital Driving Precision Exits
+            </h2>
+            <div class="w-16 h-1 bg-brand-gold"></div>
+            <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+              At Aegis, we believe that transaction success is rooted in thorough educational preparation. This Insights platform is curated by our active partners to demystify complex corporate finance mechanisms, valuation audit guidelines, and structured transaction architectures.
+            </p>
+            <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+              Whether you are preparing a middle-market technology firm for a strategic sell-side exit, navigating quality of earnings (QofE) audits, or establishing secure virtual data rooms to protect proprietary intellectual assets, our structured resources guide your executive decisions.
+            </p>
+          </div>
+          
+          <div class="lg:col-span-6 grid sm:grid-cols-2 gap-6" data-aos="fade-left">
+            <div class="p-6 bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50">
+              <div class="text-brand-gold text-2xl mb-3"><i class="fa-solid fa-chart-pie"></i></div>
+              <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white mb-2">IRS-Defensible Valuation</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                Practical guides explaining tax-defensible business valuation models, asset profiling, and regulatory compliance.
+              </p>
+            </div>
+            <div class="p-6 bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50">
+              <div class="text-brand-gold text-2xl mb-3"><i class="fa-solid fa-shield-halved"></i></div>
+              <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white mb-2">Transaction Security</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                Step-by-step guidance on keeping sensitive operational documents secure during multi-bid buyer reviews.
+              </p>
+            </div>
+            <div class="p-6 bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50">
+              <div class="text-brand-gold text-2xl mb-3"><i class="fa-solid fa-handshake"></i></div>
+              <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white mb-2">Strategic M&A Execution</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                In-depth articles covering deal structuring, cross-border regulation, earn-outs, and exit rollups.
+              </p>
+            </div>
+            <div class="p-6 bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50">
+              <div class="text-brand-gold text-2xl mb-3"><i class="fa-solid fa-calculator"></i></div>
+              <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white mb-2">Recasting Financials</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                EBITDA adjustments and recast checklists designed to maximize the enterprise value before listing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Latest Insights Grid & Categories Sidebar -->
     <section class="py-16 px-6 md:px-12 bg-slate-50 dark:bg-brand-navy transition-colors">
       <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12">
         <!-- Main Content (Articles Grid) -->
         <div class="lg:col-span-8 space-y-12">
-          <h3 class="text-2xl font-bold font-serif text-slate-900 dark:text-white mb-6">Latest Articles</h3>
+          <h3 class="text-3xl md:text-4xl font-bold font-serif text-slate-900 dark:text-white mb-6">Latest Articles</h3>
           
           <div class="grid md:grid-cols-2 gap-8">
             <!-- Article Card 1 -->
             <div class="bg-white dark:bg-brand-midnight rounded-xl overflow-hidden shadow-md border border-slate-200/50 dark:border-slate-800/50 group" data-aos="fade-up">
               <div class="relative overflow-hidden h-48">
-                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Consulting meeting" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                <img src="blog_earn_outs.png" alt="Consulting meeting" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
               </div>
               <div class="p-6 space-y-3">
                 <div class="flex justify-between items-center">
-                  <span class="text-brand-gold text-[10px] font-bold uppercase tracking-wider">M&A Strategy</span>
-                  <span class="text-xs text-slate-400">8 min read</span>
+                  <span class="text-brand-gold text-sm font-bold uppercase tracking-wider">M&A Strategy</span>
+                  <span class="text-sm text-slate-400">8 min read</span>
                 </div>
-                <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white leading-snug group-hover:text-brand-gold transition">Structuring Earn-Outs in Modern Tech Exits</h4>
-                <p class="text-slate-500 text-xs">How software founders can secure post-closing payouts while protecting operational independence...</p>
-                <div class="pt-4 flex items-center justify-between text-[11px] text-slate-400 border-t border-slate-100 dark:border-slate-800">
+                <h4 class="font-serif font-bold text-2xl text-slate-900 dark:text-white leading-snug group-hover:text-brand-gold transition">Structuring Earn-Outs in Modern Tech Exits</h4>
+                <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">How software founders can secure post-closing payouts while protecting operational independence...</p>
+                <div class="pt-4 flex items-center justify-between text-sm text-slate-400 border-t border-slate-100 dark:border-slate-800">
                   <span>June 18, 2026</span>
-                  <a href="#" class="text-brand-gold font-semibold uppercase tracking-wider flex items-center group/btn text-[10px]">
+                  <a href="#" class="text-brand-gold font-semibold uppercase tracking-wider flex items-center group/btn text-sm">
                     Read More
                     <i class="fa-solid fa-arrow-right ml-1 rtl:mr-1 rtl:rotate-180 transform group-hover/btn:translate-x-1 transition duration-300"></i>
                   </a>
@@ -219,18 +276,18 @@
             <!-- Article Card 2 -->
             <div class="bg-white dark:bg-brand-midnight rounded-xl overflow-hidden shadow-md border border-slate-200/50 dark:border-slate-800/50 group" data-aos="fade-up" data-aos-delay="100">
               <div class="relative overflow-hidden h-48">
-                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Data meeting" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                <img src="choose_us.png" alt="Data meeting" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
               </div>
               <div class="p-6 space-y-3">
                 <div class="flex justify-between items-center">
-                  <span class="text-brand-gold text-[10px] font-bold uppercase tracking-wider">Valuation</span>
-                  <span class="text-xs text-slate-400">6 min read</span>
+                  <span class="text-brand-gold text-sm font-bold uppercase tracking-wider">Valuation</span>
+                  <span class="text-sm text-slate-400">6 min read</span>
                 </div>
-                <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white leading-snug group-hover:text-brand-gold transition">The QofE Impact on Mid-Market Valuation</h4>
-                <p class="text-slate-500 text-xs">Why traditional EBITDA measurements fail to show the absolute quality of cash flow during capital audits...</p>
-                <div class="pt-4 flex items-center justify-between text-[11px] text-slate-400 border-t border-slate-100 dark:border-slate-800">
+                <h4 class="font-serif font-bold text-2xl text-slate-900 dark:text-white leading-snug group-hover:text-brand-gold transition">The QofE Impact on Mid-Market Valuation</h4>
+                <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">Why traditional EBITDA measurements fail to show the absolute quality of cash flow during capital audits...</p>
+                <div class="pt-4 flex items-center justify-between text-sm text-slate-400 border-t border-slate-100 dark:border-slate-800">
                   <span>June 12, 2026</span>
-                  <a href="#" class="text-brand-gold font-semibold uppercase tracking-wider flex items-center group/btn text-[10px]">
+                  <a href="#" class="text-brand-gold font-semibold uppercase tracking-wider flex items-center group/btn text-sm">
                     Read More
                     <i class="fa-solid fa-arrow-right ml-1 rtl:mr-1 rtl:rotate-180 transform group-hover/btn:translate-x-1 transition duration-300"></i>
                   </a>
@@ -241,18 +298,18 @@
             <!-- Article Card 3 -->
             <div class="bg-white dark:bg-brand-midnight rounded-xl overflow-hidden shadow-md border border-slate-200/50 dark:border-slate-800/50 group" data-aos="fade-up">
               <div class="relative overflow-hidden h-48">
-                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="Executive planning" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                <img src="tech_exit_case_study.png" alt="Executive planning" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
               </div>
               <div class="p-6 space-y-3">
                 <div class="flex justify-between items-center">
-                  <span class="text-brand-gold text-[10px] font-bold uppercase tracking-wider">Exit Planning</span>
-                  <span class="text-xs text-slate-400">10 min read</span>
+                  <span class="text-brand-gold text-sm font-bold uppercase tracking-wider">Exit Planning</span>
+                  <span class="text-sm text-slate-400">10 min read</span>
                 </div>
-                <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white leading-snug group-hover:text-brand-gold transition">Pre-Exit Recasting Checklists for Founders</h4>
-                <p class="text-slate-500 text-xs">Five adjustments your accounting team must complete three years before triggering a marketing program...</p>
-                <div class="pt-4 flex items-center justify-between text-[11px] text-slate-400 border-t border-slate-100 dark:border-slate-800">
+                <h4 class="font-serif font-bold text-2xl text-slate-900 dark:text-white leading-snug group-hover:text-brand-gold transition">Pre-Exit Recasting Checklists for Founders</h4>
+                <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">Five adjustments your accounting team must complete three years before triggering a marketing program...</p>
+                <div class="pt-4 flex items-center justify-between text-sm text-slate-400 border-t border-slate-100 dark:border-slate-800">
                   <span>June 08, 2026</span>
-                  <a href="#" class="text-brand-gold font-semibold uppercase tracking-wider flex items-center group/btn text-[10px]">
+                  <a href="#" class="text-brand-gold font-semibold uppercase tracking-wider flex items-center group/btn text-sm">
                     Read More
                     <i class="fa-solid fa-arrow-right ml-1 rtl:mr-1 rtl:rotate-180 transform group-hover/btn:translate-x-1 transition duration-300"></i>
                   </a>
@@ -263,18 +320,18 @@
             <!-- Article Card 4 -->
             <div class="bg-white dark:bg-brand-midnight rounded-xl overflow-hidden shadow-md border border-slate-200/50 dark:border-slate-800/50 group" data-aos="fade-up" data-aos-delay="100">
               <div class="relative overflow-hidden h-48">
-                <img src="https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&w=800&q=80" alt="Audit paperwork review" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+                <img src="blog_virtual_data_rooms.png" alt="Audit paperwork review" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
               </div>
               <div class="p-6 space-y-3">
                 <div class="flex justify-between items-center">
-                  <span class="text-brand-gold text-[10px] font-bold uppercase tracking-wider">Due Diligence</span>
-                  <span class="text-xs text-slate-400">7 min read</span>
+                  <span class="text-brand-gold text-sm font-bold uppercase tracking-wider">Due Diligence</span>
+                  <span class="text-sm text-slate-400">7 min read</span>
                 </div>
-                <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white leading-snug group-hover:text-brand-gold transition">Preparing Secure Virtual Data Rooms</h4>
-                <p class="text-slate-500 text-xs">How to audit data room indexing and credential thresholds to prevent intellectual property theft during buyer review...</p>
-                <div class="pt-4 flex items-center justify-between text-[11px] text-slate-400 border-t border-slate-100 dark:border-slate-800">
+                <h4 class="font-serif font-bold text-2xl text-slate-900 dark:text-white leading-snug group-hover:text-brand-gold transition">Preparing Secure Virtual Data Rooms</h4>
+                <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">How to audit data room indexing and credential thresholds to prevent intellectual property theft during buyer review...</p>
+                <div class="pt-4 flex items-center justify-between text-sm text-slate-400 border-t border-slate-100 dark:border-slate-800">
                   <span>June 02, 2026</span>
-                  <a href="#" class="text-brand-gold font-semibold uppercase tracking-wider flex items-center group/btn text-[10px]">
+                  <a href="#" class="text-brand-gold font-semibold uppercase tracking-wider flex items-center group/btn text-sm">
                     Read More
                     <i class="fa-solid fa-arrow-right ml-1 rtl:mr-1 rtl:rotate-180 transform group-hover/btn:translate-x-1 transition duration-300"></i>
                   </a>
@@ -339,12 +396,12 @@
       </div>
       <div class="max-w-3xl mx-auto relative z-10 space-y-6" data-aos="zoom-in">
         <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Secure Strategy</span>
-        <h2 class="text-3xl md:text-5xl font-bold font-serif">Planning a Strategic Corporate Transition?</h2>
-        <p class="text-slate-300 text-base max-w-xl mx-auto">
+        <h2 class="text-3xl md:text-5xl font-bold font-serif leading-tight">Planning a Strategic Corporate Transition?</h2>
+        <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto">
           Contact our senior advisors in absolute confidence to explore your valuation, potential exit paths, or target market acquisition programs.
         </p>
-        <div class="pt-4">
-          <a href="contact.html" class="px-8 py-3 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy font-bold uppercase tracking-wider rounded transition shadow-lg">
+        <div class="pt-4 max-w-xs mx-auto md:max-w-none">
+          <a href="contact.html" class="flex md:inline-flex items-center justify-center text-center px-8 py-3 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy font-bold uppercase tracking-wider rounded transition shadow-lg text-sm md:text-base leading-normal w-full md:w-auto">
             Schedule Confidential Session
           </a>
         </div>
@@ -354,7 +411,7 @@
 
   <!-- Footer -->
   <footer class="bg-white dark:bg-brand-navy text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800 py-16 px-6 md:px-12">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- Col 1: Overview -->
       <div class="space-y-4">
         <a href="index.html" class="flex items-center space-x-2 text-xl font-bold font-serif text-slate-900 dark:text-white tracking-wider">
