@@ -241,8 +241,50 @@ html.dark,
   font-weight: 700 !important;
 }
 
-.about-page header *,
-.about-page footer *,
-.about-page #mobile-nav * {
+.about-page header *:not(i):not([class*="fa-"]),
+.about-page footer *:not(i):not([class*="fa-"]),
+.about-page #mobile-nav *:not(i):not([class*="fa-"]) {
   font-weight: inherit !important;
 }
+
+/* Footer text contrast overrides */
+footer, 
+footer a:not(:hover), 
+footer p {
+  color: #334155; /* slate-700 instead of slate-600 */
+}
+
+footer .text-slate-400,
+footer .text-slate-500,
+footer .text-slate-600 {
+  color: #334155 !important; /* slate-700 for better readability */
+}
+
+footer a.text-slate-900,
+footer h4.text-slate-900 {
+  color: #0f172a !important; /* slate-900 */
+}
+
+/* Dark mode footer contrast overrides */
+.dark footer,
+.dark footer a:not(:hover),
+.dark footer p {
+  color: #cbd5e1 !important; /* slate-300 instead of slate-400/500 */
+}
+
+.dark footer .text-slate-400,
+.dark footer .text-slate-500,
+.dark footer .text-slate-600,
+.dark footer .dark\:text-slate-400 {
+  color: #e2e8f0 !important; /* slate-200 for higher contrast on dark background */
+}
+
+.dark footer a.dark\:text-white,
+.dark footer h4.dark\:text-white {
+  color: #ffffff !important;
+}
+
+.dark footer a:hover {
+  color: #c5a880 !important; /* Maintain soft gold color on hover */
+}
+
