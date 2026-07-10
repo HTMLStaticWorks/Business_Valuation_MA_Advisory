@@ -64,9 +64,13 @@
     </a>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden lg:flex items-center space-x-4 xl:space-x-8 rtl:space-x-reverse font-sans text-sm uppercase tracking-wider">
-      <a href="index.html" class="nav-link active relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+    <nav class="hidden lg:flex items-center space-x-2.5 xl:space-x-6 rtl:space-x-reverse font-sans text-[11px] xl:text-sm uppercase tracking-wider">
+      <a href="index.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         Home
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="home2.html" class="nav-link active relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Home 2
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
       <a href="about.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
@@ -122,6 +126,7 @@
   <!-- Mobile Overlay Navigation Menu -->
   <div id="mobile-nav" class="fixed inset-0 bg-brand-navy/95 backdrop-blur-lg z-30 hidden flex-col justify-center items-center space-y-6 text-xl text-white uppercase tracking-widest font-sans">
     <a href="index.html" class="hover:text-brand-gold transition duration-300">Home</a>
+    <a href="home2.html" class="hover:text-brand-gold transition duration-300">Home 2</a>
     <a href="about.html" class="hover:text-brand-gold transition duration-300">About</a>
     <a href="valuation.html" class="hover:text-brand-gold transition duration-300">Valuation</a>
     <a href="advisory.html" class="hover:text-brand-gold transition duration-300">M&A Advisory</a>
@@ -386,7 +391,7 @@
           <p class="text-slate-500 text-sm mt-4 max-w-xl mx-auto">From strategic deal preparation to absolute closure, here is how we execute mid-market transaction campaigns.</p>
         </div>
 
-        <div class="grid md:grid-cols-5 gap-6 relative">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 relative">
           <!-- Step 1 -->
           <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between" data-aos="fade-up">
             <div>
@@ -432,7 +437,7 @@
           </div>
 
           <!-- Step 5 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="400">
+          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between md:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="400">
             <div>
               <span class="text-brand-gold font-serif font-bold text-2xl block mb-2">05</span>
               <h4 class="font-bold text-slate-900 dark:text-white text-sm">Definitive Closing</h4>
@@ -587,39 +592,59 @@
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <!-- Step 1 -->
-          <div class="bg-white dark:bg-brand-navy p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/80 hover-glow" data-aos="fade-up">
-            <div class="w-10 h-10 bg-brand-gold/10 text-brand-gold rounded-lg flex items-center justify-center font-bold text-sm mb-4">I</div>
-            <h4 class="font-bold text-slate-900 dark:text-white text-sm">Confidential Call</h4>
-            <p class="text-slate-500 text-xs mt-2 leading-relaxed">
-              Schedule an initial consultation call with a senior partner to discuss your target transaction or appraisal requirements.
-            </p>
+          <div class="bg-white dark:bg-brand-navy rounded-xl border border-slate-200/50 dark:border-slate-800/80 hover-glow overflow-hidden flex flex-col justify-between" data-aos="fade-up">
+            <div class="h-36 overflow-hidden relative group">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Confidential Call" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+              <span class="absolute top-3 left-3 bg-brand-gold text-brand-navy font-bold text-[10px] uppercase tracking-wider px-2 py-1 rounded shadow-md">Step I</span>
+            </div>
+            <div class="p-6 flex-grow">
+              <h4 class="font-bold text-slate-900 dark:text-white text-sm">Confidential Call</h4>
+              <p class="text-slate-500 text-xs mt-2 leading-relaxed">
+                Schedule an initial consultation call with a senior partner to discuss your target transaction or appraisal requirements.
+              </p>
+            </div>
           </div>
 
           <!-- Step 2 -->
-          <div class="bg-white dark:bg-brand-navy p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/80 hover-glow" data-aos="fade-up" data-aos-delay="100">
-            <div class="w-10 h-10 bg-brand-gold/10 text-brand-gold rounded-lg flex items-center justify-center font-bold text-sm mb-4">II</div>
-            <h4 class="font-bold text-slate-900 dark:text-white text-sm">Secure Mutual NDA</h4>
-            <p class="text-slate-500 text-xs mt-2 leading-relaxed">
-              Prior to discussing any proprietary metrics, we sign a mutual NDA to protect your private corporate data.
-            </p>
+          <div class="bg-white dark:bg-brand-navy rounded-xl border border-slate-200/50 dark:border-slate-800/80 hover-glow overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+            <div class="h-36 overflow-hidden relative group">
+              <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80" alt="Secure Mutual NDA" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+              <span class="absolute top-3 left-3 bg-brand-gold text-brand-navy font-bold text-[10px] uppercase tracking-wider px-2 py-1 rounded shadow-md">Step II</span>
+            </div>
+            <div class="p-6 flex-grow">
+              <h4 class="font-bold text-slate-900 dark:text-white text-sm">Secure Mutual NDA</h4>
+              <p class="text-slate-500 text-xs mt-2 leading-relaxed">
+                Prior to discussing any proprietary metrics, we sign a mutual NDA to protect your private corporate data.
+              </p>
+            </div>
           </div>
 
           <!-- Step 3 -->
-          <div class="bg-white dark:bg-brand-navy p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/80 hover-glow" data-aos="fade-up" data-aos-delay="200">
-            <div class="w-10 h-10 bg-brand-gold/10 text-brand-gold rounded-lg flex items-center justify-center font-bold text-sm mb-4">III</div>
-            <h4 class="font-bold text-slate-900 dark:text-white text-sm">Enterprise Discovery</h4>
-            <p class="text-slate-500 text-xs mt-2 leading-relaxed">
-              Our analysts perform a high-level review of recent performance, balance sheets, and capital demands.
-            </p>
+          <div class="bg-white dark:bg-brand-navy rounded-xl border border-slate-200/50 dark:border-slate-800/80 hover-glow overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+            <div class="h-36 overflow-hidden relative group">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Enterprise Discovery" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+              <span class="absolute top-3 left-3 bg-brand-gold text-brand-navy font-bold text-[10px] uppercase tracking-wider px-2 py-1 rounded shadow-md">Step III</span>
+            </div>
+            <div class="p-6 flex-grow">
+              <h4 class="font-bold text-slate-900 dark:text-white text-sm">Enterprise Discovery</h4>
+              <p class="text-slate-500 text-xs mt-2 leading-relaxed">
+                Our analysts perform a high-level review of recent performance, balance sheets, and capital demands.
+              </p>
+            </div>
           </div>
 
           <!-- Step 4 -->
-          <div class="bg-white dark:bg-brand-navy p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/80 hover-glow" data-aos="fade-up" data-aos-delay="300">
-            <div class="w-10 h-10 bg-brand-gold/10 text-brand-gold rounded-lg flex items-center justify-center font-bold text-sm mb-4">IV</div>
-            <h4 class="font-bold text-slate-900 dark:text-white text-sm">Advisory Mandate</h4>
-            <p class="text-slate-500 text-xs mt-2 leading-relaxed">
-              We define clear engagement parameters, confirm fee structures, and formally launch the valuation or M&A campaign.
-            </p>
+          <div class="bg-white dark:bg-brand-navy rounded-xl border border-slate-200/50 dark:border-slate-800/80 hover-glow overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+            <div class="h-36 overflow-hidden relative group">
+              <img src="https://images.unsplash.com/photo-1521791136368-1a46827d0adb?auto=format&fit=crop&w=600&q=80" alt="Advisory Mandate" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+              <span class="absolute top-3 left-3 bg-brand-gold text-brand-navy font-bold text-[10px] uppercase tracking-wider px-2 py-1 rounded shadow-md">Step IV</span>
+            </div>
+            <div class="p-6 flex-grow">
+              <h4 class="font-bold text-slate-900 dark:text-white text-sm">Advisory Mandate</h4>
+              <p class="text-slate-500 text-xs mt-2 leading-relaxed">
+                We define clear engagement parameters, confirm fee structures, and formally launch the valuation or M&A campaign.
+              </p>
+            </div>
           </div>
         </div>
       </div>
