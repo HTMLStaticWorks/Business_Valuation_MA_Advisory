@@ -235,7 +235,7 @@ function initTestimonialSlider() {
     dotsContainer.innerHTML = '';
     slides.forEach((_, index) => {
       const dot = document.createElement('button');
-      dot.className = `w-3 h-3 rounded-full transition-all duration-300 ${index === 0 ? 'bg-[#c5a880] w-6' : 'bg-slate-400/40 dark:bg-slate-700/60'}`;
+      dot.className = `w-3 h-3 rounded-full transition-all duration-300 ${index === 0 ? 'bg-[#d4b26f] w-6' : 'bg-slate-400/40 dark:bg-slate-700/60'}`;
       dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
       dot.addEventListener('click', () => {
         goToSlide(index);
@@ -262,10 +262,10 @@ function initTestimonialSlider() {
       const dots = dotsContainer.querySelectorAll('button');
       dots.forEach((dot, idx) => {
         if (idx === currentIndex) {
-          dot.classList.add('bg-[#c5a880]', 'w-6');
+          dot.classList.add('bg-[#d4b26f]', 'w-6');
           dot.classList.remove('bg-slate-400/40', 'dark:bg-slate-700/60');
         } else {
-          dot.classList.remove('bg-[#c5a880]', 'w-6');
+          dot.classList.remove('bg-[#d4b26f]', 'w-6');
           dot.classList.add('bg-slate-400/40', 'dark:bg-slate-700/60');
         }
       });
@@ -402,7 +402,7 @@ function initActiveNavLink() {
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (href === currentPath) {
-      link.classList.add('text-[#c5a880]', 'font-semibold');
+      link.classList.add('text-[#d4b26f]', 'font-semibold');
       link.classList.remove('text-slate-300', 'text-slate-700', 'dark:text-slate-300');
       
       // Underline/active indicator span
@@ -421,7 +421,7 @@ function initActiveNavLink() {
     mobileLinks.forEach(link => {
       const href = link.getAttribute('href');
       if (href === currentPath) {
-        link.classList.add('text-[#c5a880]', 'font-bold');
+        link.classList.add('text-[#d4b26f]', 'font-bold');
         link.classList.remove('text-white');
       }
     });

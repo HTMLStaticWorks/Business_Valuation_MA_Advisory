@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aegis | Premium Business Valuation & M&A Advisory</title>
-  <meta name="description" content="Aegis delivers world-class Business Valuation, Mergers & Acquisitions, Exit Planning, and Transaction Support to help business owners and investors secure maximum value.">
-  
+  <meta name="description"
+    content="Aegis delivers world-class Business Valuation, Mergers & Acquisitions, Exit Planning, and Transaction Support to help business owners and investors secure maximum value.">
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Aegis | Premium Business Valuation & M&A Advisory">
-  <meta property="og:description" content="Secure your strategic legacy with Aegis. Deep expertise in business valuation, sell-side, buy-side, and corporate finance.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:description"
+    content="Secure your strategic legacy with Aegis. Deep expertise in business valuation, sell-side, buy-side, and corporate finance.">
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80">
 
   <!-- Tailwind CSS Play CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -21,13 +25,13 @@
         extend: {
           colors: {
             brand: {
-              navy: '#09100F',
-              midnight: '#0E1715',
-              royal: '#143E35',
+              navy: '#071A10',
+              midnight: '#0F2B1A',
+              royal: '#059669',
               slate: '#64748B',
-              teal: '#3D6B5F',
-              gold: '#C5A880',
-              silver: '#F1F5F9'
+              teal: '#10B981',
+              gold: '#D4B26F',
+              silver: '#F8FAFC'
             }
           },
           fontFamily: {
@@ -47,15 +51,15 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="logo.png">
 </head>
-<body class="bg-slate-50 dark:bg-brand-navy text-slate-800 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
 
-  <!-- Scroll Progress Bar -->
-  <div class="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-royal via-brand-teal to-brand-gold z-50">
-    <div id="scroll-progress" class="h-full bg-brand-gold w-0 transition-all duration-100"></div>
-  </div>
+<body
+  class="bg-slate-50 dark:bg-brand-navy text-slate-800 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
+
+
 
   <!-- Header -->
-  <header id="header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4 px-4 lg:px-6 xl:px-12 flex items-center justify-between bg-transparent">
+  <header id="header"
+    class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4 px-4 lg:px-6 xl:px-12 flex items-center justify-between bg-transparent">
     <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse" id="header-logo">
       <img src="logo.png" alt="Aegis Logo" class="h-10 w-auto rounded">
       <span class="text-2xl font-bold tracking-wider text-brand-navy dark:text-white font-serif flex items-center">
@@ -64,67 +68,93 @@
     </a>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden lg:flex items-center space-x-2.5 xl:space-x-6 rtl:space-x-reverse font-sans text-[11px] xl:text-sm uppercase tracking-wider">
-      <a href="index.html" class="nav-link active relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+    <nav
+      class="hidden lg:flex items-center space-x-2.5 xl:space-x-6 rtl:space-x-reverse font-sans text-[11px] xl:text-sm uppercase tracking-wider">
+      <a href="index.html"
+        class="nav-link active relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         Home
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+        <span
+          class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
-      <a href="home2.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+      <a href="home2.html"
+        class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         Home 2
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+        <span
+          class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
-      <a href="about.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+      <a href="about.html"
+        class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         About
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+        <span
+          class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
-      <a href="valuation.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+      <a href="valuation.html"
+        class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         Valuation
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+        <span
+          class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
-      <a href="advisory.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+      <a href="advisory.html"
+        class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         M&A Advisory
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+        <span
+          class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
-      <a href="transactions.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+      <a href="transactions.html"
+        class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         Transactions
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+        <span
+          class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
-      <a href="blog.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+      <a href="blog.html"
+        class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         Blog
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+        <span
+          class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
-      <a href="contact.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+      <a href="contact.html"
+        class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         Contact
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+        <span
+          class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
     </nav>
 
     <!-- Toolbar controls -->
     <div class="hidden lg:flex items-center space-x-2 xl:space-x-4 rtl:space-x-reverse">
       <!-- Theme Toggle -->
-      <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-300/30 dark:border-white/10 text-brand-navy dark:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-label="Toggle theme">
+      <button id="theme-toggle"
+        class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-300/30 dark:border-white/10 text-brand-navy dark:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition"
+        aria-label="Toggle theme">
         <i class="fa-solid fa-sun sun-icon hidden text-brand-gold text-sm"></i>
         <i class="fa-solid fa-moon moon-icon text-brand-navy dark:text-slate-300 text-sm"></i>
       </button>
 
       <!-- RTL Toggle -->
-      <button id="rtl-toggle" class="w-10 h-10 flex items-center justify-center text-xs font-bold rounded-full border border-slate-300/30 dark:border-white/10 text-brand-navy dark:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-label="Toggle text direction">
+      <button id="rtl-toggle"
+        class="w-10 h-10 flex items-center justify-center text-xs font-bold rounded-full border border-slate-300/30 dark:border-white/10 text-brand-navy dark:text-slate-300 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition"
+        aria-label="Toggle text direction">
         RTL
       </button>
 
-      <a href="signup.html" class="px-5 py-2 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy border border-brand-gold text-sm font-semibold uppercase tracking-wider rounded transition-all duration-300 shadow-md">Sign Up</a>
+      <a href="signup.html"
+        class="px-5 py-2 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy border border-brand-gold text-sm font-semibold uppercase tracking-wider rounded transition-all duration-300 shadow-md">Sign
+        Up</a>
     </div>
 
     <!-- Mobile controls & Hamburger -->
     <div class="flex lg:hidden items-center space-x-2 rtl:space-x-reverse">
-      <button id="hamburger-menu" class="flex items-center px-3 py-2 border border-brand-navy/30 dark:border-white/30 text-brand-navy dark:text-white rounded focus:outline-none hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition" aria-expanded="false" aria-label="Toggle mobile menu">
+      <button id="hamburger-menu"
+        class="flex items-center px-3 py-2 border border-brand-navy/30 dark:border-white/30 text-brand-navy dark:text-white rounded focus:outline-none hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition"
+        aria-expanded="false" aria-label="Toggle mobile menu">
         <i class="fa-solid fa-bars text-lg" id="hamburger-icon"></i>
       </button>
     </div>
   </header>
 
   <!-- Mobile Overlay Navigation Menu -->
-  <div id="mobile-nav" class="fixed inset-0 bg-brand-navy/95 backdrop-blur-lg z-30 hidden flex-col justify-center items-center space-y-6 text-xl text-white uppercase tracking-widest font-sans">
+  <div id="mobile-nav"
+    class="fixed inset-0 bg-brand-navy/95 backdrop-blur-lg z-30 hidden flex-col justify-center items-center space-y-6 text-xl text-white uppercase tracking-widest font-sans">
     <a href="index.html" class="hover:text-brand-gold transition duration-300">Home</a>
     <a href="home2.html" class="hover:text-brand-gold transition duration-300">Home 2</a>
     <a href="about.html" class="hover:text-brand-gold transition duration-300">About</a>
@@ -134,16 +164,22 @@
     <a href="blog.html" class="hover:text-brand-gold transition duration-300">Blog</a>
     <a href="contact.html" class="hover:text-brand-gold transition duration-300">Contact</a>
     <div class="h-[1px] w-24 bg-brand-gold/40"></div>
-    <a href="signup.html" class="px-6 py-2.5 bg-brand-gold text-brand-navy font-semibold text-sm rounded hover:bg-white transition">Sign Up</a>
-    
+    <a href="signup.html"
+      class="px-6 py-2.5 bg-brand-gold text-brand-navy font-semibold text-sm rounded hover:bg-white transition">Sign
+      Up</a>
+
     <div class="h-[1px] w-24 bg-brand-gold/40"></div>
     <div class="flex items-center space-x-6 mt-4">
       <!-- Mobile Theme Toggle -->
-      <button id="theme-toggle-mobile" class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-white/10 transition" onclick="document.getElementById('theme-toggle').click()" aria-label="Toggle theme">
+      <button id="theme-toggle-mobile"
+        class="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-white hover:bg-white/10 transition"
+        onclick="document.getElementById('theme-toggle').click()" aria-label="Toggle theme">
         <i class="fa-solid fa-circle-half-stroke text-lg"></i>
       </button>
       <!-- Mobile RTL Toggle -->
-      <button id="rtl-toggle-mobile" class="w-12 h-12 flex items-center justify-center text-sm font-bold rounded-full border border-white/20 text-white hover:bg-white/10 transition" onclick="document.getElementById('rtl-toggle').click()" aria-label="Toggle text direction">
+      <button id="rtl-toggle-mobile"
+        class="w-12 h-12 flex items-center justify-center text-sm font-bold rounded-full border border-white/20 text-white hover:bg-white/10 transition"
+        onclick="document.getElementById('rtl-toggle').click()" aria-label="Toggle text direction">
         RTL
       </button>
     </div>
@@ -151,33 +187,46 @@
 
   <main class="flex-grow pt-20">
     <!-- Hero Section -->
-    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20 px-6 md:px-12 text-white bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(7, 26, 47, 0.9), rgba(15, 39, 71, 0.95)), url('hero1.png');">
+    <section
+      class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20 px-6 md:px-12 text-white bg-cover bg-center"
+      style="background-image: linear-gradient(to bottom, rgba(7, 26, 16, 0.9), rgba(15, 43, 26, 0.95)), url('hero1.png');">
       <!-- Animated financial abstract elements -->
       <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
         <div class="absolute top-[15%] left-[10%] w-72 h-72 bg-brand-royal rounded-full blur-3xl animate-float"></div>
-        <div class="absolute bottom-[20%] right-[15%] w-96 h-96 bg-brand-teal rounded-full blur-3xl animate-float-delayed"></div>
+        <div
+          class="absolute bottom-[20%] right-[15%] w-96 h-96 bg-brand-teal rounded-full blur-3xl animate-float-delayed">
+        </div>
         <!-- Grid overlay -->
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+        <div
+          class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px]">
+        </div>
       </div>
 
       <div class="max-w-6xl mx-auto w-full grid lg:grid-cols-12 gap-12 items-center relative z-10">
         <!-- Hero Text -->
         <div class="lg:col-span-7 space-y-6 text-center lg:text-left rtl:lg:text-right" data-aos="fade-up">
-          <span class="inline-block px-3 py-1 bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-xs font-semibold tracking-widest uppercase rounded-full">
+          <span
+            class="inline-block px-3 py-1 bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-xs font-semibold tracking-widest uppercase rounded-full">
             Elite Corporate Finance Advisory
           </span>
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-serif leading-tight text-white">
             Maximized Corporate Value.<br>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-slate-100 to-brand-gold">Precision Exits.</span>
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-slate-100 to-brand-gold">Precision
+              Exits.</span>
           </h1>
           <p class="text-slate-300 text-base md:text-lg max-w-xl mx-auto lg:mx-0">
-            Aegis delivers bespoke Business Valuation, M&A Buy-Side/Sell-Side solutions, and Exit Strategies for mid-market business owners and institutional investors.
+            Aegis delivers bespoke Business Valuation, M&A Buy-Side/Sell-Side solutions, and Exit Strategies for
+            mid-market business owners and institutional investors.
           </p>
-          <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 rtl:space-x-reverse justify-center lg:justify-start">
-            <a href="contact.html" class="px-8 py-3 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy font-semibold uppercase tracking-wider rounded shadow-lg transition-all duration-300 text-center">
+          <div
+            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 rtl:space-x-reverse justify-center lg:justify-start">
+            <a href="contact.html"
+              class="px-8 py-3 bg-brand-gold text-brand-navy hover:bg-white hover:text-brand-navy font-semibold uppercase tracking-wider rounded shadow-lg transition-all duration-300 text-center">
               Request Advisory Call
             </a>
-            <a href="about.html" class="px-8 py-3 bg-transparent border border-white/30 text-white hover:bg-white/10 font-semibold uppercase tracking-wider rounded transition-all duration-300 text-center">
+            <a href="about.html"
+              class="px-8 py-3 bg-transparent border border-white/30 text-white hover:bg-white/10 font-semibold uppercase tracking-wider rounded transition-all duration-300 text-center">
               Explore Services
             </a>
           </div>
@@ -185,11 +234,13 @@
 
         <!-- Animated Hero Metrics Column -->
         <div class="lg:col-span-5 flex flex-col space-y-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="glass-panel p-6 rounded-xl relative overflow-hidden group hover:border-brand-gold/40 transition-colors">
+          <div
+            class="glass-panel p-6 rounded-xl relative overflow-hidden group hover:border-brand-gold/40 transition-colors">
             <div class="flex items-center justify-between">
               <div>
                 <p class="text-xs text-brand-gold uppercase tracking-wider">Completed Transaction Value</p>
-                <h3 class="text-4xl font-bold font-serif mt-1">$<span class="stat-counter" data-target="4.2" data-decimal="true" data-suffix="B">0</span></h3>
+                <h3 class="text-4xl font-bold font-serif mt-1">$<span class="stat-counter" data-target="4.2"
+                    data-decimal="true" data-suffix="B">0</span></h3>
               </div>
               <div class="p-3 bg-brand-gold/10 rounded-lg text-brand-gold text-2xl">
                 <i class="fa-solid fa-chart-line"></i>
@@ -198,11 +249,13 @@
             <p class="text-slate-400 text-xs mt-3">Reflecting cross-border and mid-market advisory transactions.</p>
           </div>
 
-          <div class="glass-panel p-6 rounded-xl relative overflow-hidden group hover:border-brand-gold/40 transition-colors">
+          <div
+            class="glass-panel p-6 rounded-xl relative overflow-hidden group hover:border-brand-gold/40 transition-colors">
             <div class="flex items-center justify-between">
               <div>
                 <p class="text-xs text-brand-gold uppercase tracking-wider">Accuracy Valuation Rate</p>
-                <h3 class="text-4xl font-bold font-serif mt-1"><span class="stat-counter" data-target="99" data-suffix="%">0</span></h3>
+                <h3 class="text-4xl font-bold font-serif mt-1"><span class="stat-counter" data-target="99"
+                    data-suffix="%">0</span></h3>
               </div>
               <div class="p-3 bg-brand-gold/10 rounded-lg text-brand-gold text-2xl">
                 <i class="fa-solid fa-scale-balanced"></i>
@@ -211,11 +264,13 @@
             <p class="text-slate-400 text-xs mt-3">Verified accuracy in pricing IRS-defensible valuation audits.</p>
           </div>
 
-          <div class="glass-panel p-6 rounded-xl relative overflow-hidden group hover:border-brand-gold/40 transition-colors">
+          <div
+            class="glass-panel p-6 rounded-xl relative overflow-hidden group hover:border-brand-gold/40 transition-colors">
             <div class="flex items-center justify-between">
               <div>
                 <p class="text-xs text-brand-gold uppercase tracking-wider">Strategic Network Reach</p>
-                <h3 class="text-4xl font-bold font-serif mt-1"><span class="stat-counter" data-target="150" data-suffix="+">0</span></h3>
+                <h3 class="text-4xl font-bold font-serif mt-1"><span class="stat-counter" data-target="150"
+                    data-suffix="+">0</span></h3>
               </div>
               <div class="p-3 bg-brand-gold/10 rounded-lg text-brand-gold text-2xl">
                 <i class="fa-solid fa-globe"></i>
@@ -230,7 +285,8 @@
     <!-- Trusted By / Partners Section -->
     <section class="py-10 bg-slate-100 dark:bg-brand-navy border-y border-slate-200/10">
       <div class="max-w-6xl mx-auto px-6">
-        <p class="text-center text-xs uppercase tracking-widest text-slate-400 dark:text-slate-500 font-semibold mb-6">Trusted by leading companies and financial institutions</p>
+        <p class="text-center text-xs uppercase tracking-widest text-slate-400 dark:text-slate-500 font-semibold mb-6">
+          Trusted by leading companies and financial institutions</p>
         <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center opacity-60 dark:opacity-40">
           <div class="text-xl font-bold font-serif text-slate-900 dark:text-white text-center">BLACKSTONE CORP</div>
           <div class="text-xl font-bold font-serif text-slate-900 dark:text-white text-center">VERTEX VENTURES</div>
@@ -246,7 +302,8 @@
       <div class="max-w-6xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
           <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Expertise & Capabilities</span>
-          <h2 class="text-3xl md:text-4xl font-bold font-serif mt-2 text-slate-900 dark:text-white">Core Strategic Services</h2>
+          <h2 class="text-3xl md:text-4xl font-bold font-serif mt-2 text-slate-900 dark:text-white">Core Strategic
+            Services</h2>
           <div class="w-16 h-1 bg-brand-gold mx-auto mt-4"></div>
           <p class="text-slate-600 dark:text-slate-400 mt-4">
             Bespoke investment banking services that align transactional efficiency with your corporate goals.
@@ -255,79 +312,107 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Card 1 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50 hover-glow overflow-hidden flex flex-col justify-between" data-aos="fade-up">
+          <div
+            class="bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50 hover-glow overflow-hidden flex flex-col justify-between"
+            data-aos="fade-up">
             <div class="h-48 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Sell-Side Advisory" class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
+                alt="Sell-Side Advisory"
+                class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
             </div>
             <div class="p-6 md:p-8 flex-grow">
               <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">Sell-Side Advisory</h3>
               <p class="text-slate-600 dark:text-slate-400 text-sm">
-                We guide business owners through complex transitions, executing strategic campaigns to capture maximum valuations from premium corporate buyers.
+                We guide business owners through complex transitions, executing strategic campaigns to capture maximum
+                valuations from premium corporate buyers.
               </p>
             </div>
           </div>
 
           <!-- Card 2 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50 hover-glow overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50 hover-glow overflow-hidden flex flex-col justify-between"
+            data-aos="fade-up" data-aos-delay="100">
             <div class="h-48 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Buy-Side Advisory" class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80"
+                alt="Buy-Side Advisory"
+                class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
             </div>
             <div class="p-6 md:p-8 flex-grow">
               <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">Buy-Side Advisory</h3>
               <p class="text-slate-600 dark:text-slate-400 text-sm">
-                Identifying, analyzing, and negotiating target acquisitions that match strategic growth metrics, achieving maximum transactional leverage.
+                Identifying, analyzing, and negotiating target acquisitions that match strategic growth metrics,
+                achieving maximum transactional leverage.
               </p>
             </div>
           </div>
 
           <!-- Card 3 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50 hover-glow overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50 hover-glow overflow-hidden flex flex-col justify-between"
+            data-aos="fade-up" data-aos-delay="200">
             <div class="h-48 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=600&q=80" alt="Business Valuation" class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
+              <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=600&q=80"
+                alt="Business Valuation"
+                class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
             </div>
             <div class="p-6 md:p-8 flex-grow">
               <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">Business Valuation</h3>
               <p class="text-slate-600 dark:text-slate-400 text-sm">
-                Defensible, rigorous appraisals for M&A transactions, financial reporting, partnership disputes, IRS compliance, and strategic planning.
+                Defensible, rigorous appraisals for M&A transactions, financial reporting, partnership disputes, IRS
+                compliance, and strategic planning.
               </p>
             </div>
           </div>
 
           <!-- Card 4 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50 hover-glow overflow-hidden flex flex-col justify-between" data-aos="fade-up">
+          <div
+            class="bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50 hover-glow overflow-hidden flex flex-col justify-between"
+            data-aos="fade-up">
             <div class="h-48 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80" alt="Exit Planning" class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
+              <img src="https://images.pexels.com/photos/36766685/pexels-photo-36766685.jpeg" alt="Exit Planning"
+                class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
             </div>
             <div class="p-6 md:p-8 flex-grow">
               <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">Exit Planning</h3>
               <p class="text-slate-600 dark:text-slate-400 text-sm">
-                Structured consulting processes to maximize enterprise value and secure internal or external succession paths years prior to target transactions.
+                Structured consulting processes to maximize enterprise value and secure internal or external succession
+                paths years prior to target transactions.
               </p>
             </div>
           </div>
 
           <!-- Card 5 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50 hover-glow overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50 hover-glow overflow-hidden flex flex-col justify-between"
+            data-aos="fade-up" data-aos-delay="100">
             <div class="h-48 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80" alt="Financial Due Diligence" class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
+              <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80"
+                alt="Financial Due Diligence"
+                class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
             </div>
             <div class="p-6 md:p-8 flex-grow">
               <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">Financial Due Diligence</h3>
               <p class="text-slate-600 dark:text-slate-400 text-sm">
-                In-depth quality of earnings reviews, balance sheet audits, and working capital assessments to eliminate deal risks and structure favorable deals.
+                In-depth quality of earnings reviews, balance sheet audits, and working capital assessments to eliminate
+                deal risks and structure favorable deals.
               </p>
             </div>
           </div>
 
           <!-- Card 6 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50 hover-glow overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="bg-slate-50 dark:bg-brand-midnight rounded-xl border border-slate-200/50 dark:border-slate-800/50 hover-glow overflow-hidden flex flex-col justify-between"
+            data-aos="fade-up" data-aos-delay="200">
             <div class="h-48 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80" alt="Transaction Support" class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
+              <img src="https://images.pexels.com/photos/7841477/pexels-photo-7841477.jpeg" alt="Transaction Support"
+                class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
             </div>
             <div class="p-6 md:p-8 flex-grow">
               <h3 class="text-xl font-bold font-serif text-slate-900 dark:text-white mb-2">Transaction Support</h3>
               <p class="text-slate-600 dark:text-slate-400 text-sm">
-                Complete support from letter of intent (LOI) signing to absolute closing, including post-merger integration planning and strategic negotiation.
+                Complete support from letter of intent (LOI) signing to absolute closing, including post-merger
+                integration planning and strategic negotiation.
               </p>
             </div>
           </div>
@@ -341,10 +426,12 @@
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div data-aos="fade-right">
             <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Methodology & Rigor</span>
-            <h2 class="text-3xl md:text-4xl font-bold font-serif mt-2 text-slate-900 dark:text-white">Our Valuation Methodologies</h2>
+            <h2 class="text-3xl md:text-4xl font-bold font-serif mt-2 text-slate-900 dark:text-white">Our Valuation
+              Methodologies</h2>
             <div class="w-16 h-1 bg-brand-gold mt-4 mb-6"></div>
             <p class="text-slate-600 dark:text-slate-400 mb-6">
-              Our firm utilizes sophisticated, industry-standard corporate appraisal models to establish defensible enterprise value. We do not rely on guesses; we build comprehensive mathematical profiles.
+              Our firm utilizes sophisticated, industry-standard corporate appraisal models to establish defensible
+              enterprise value. We do not rely on guesses; we build comprehensive mathematical profiles.
             </p>
             <div class="space-y-4">
               <div class="flex items-start space-x-3 rtl:space-x-reverse">
@@ -353,7 +440,8 @@
                 </div>
                 <div>
                   <h4 class="font-bold text-slate-900 dark:text-white">Discounted Cash Flow (DCF) Analysis</h4>
-                  <p class="text-xs text-slate-500">Forecasting future cash flows and discounting them to reflect current asset worth.</p>
+                  <p class="text-xs text-slate-500">Forecasting future cash flows and discounting them to reflect
+                    current asset worth.</p>
                 </div>
               </div>
               <div class="flex items-start space-x-3 rtl:space-x-reverse">
@@ -362,7 +450,8 @@
                 </div>
                 <div>
                   <h4 class="font-bold text-slate-900 dark:text-white">Precedent Transactions Analysis</h4>
-                  <p class="text-xs text-slate-500">Reviewing premium database entries of comparable transactions completed in your sector.</p>
+                  <p class="text-xs text-slate-500">Reviewing premium database entries of comparable transactions
+                    completed in your sector.</p>
                 </div>
               </div>
               <div class="flex items-start space-x-3 rtl:space-x-reverse">
@@ -371,7 +460,8 @@
                 </div>
                 <div>
                   <h4 class="font-bold text-slate-900 dark:text-white">Asset-Based Valuation Methodologies</h4>
-                  <p class="text-xs text-slate-500">Recasting asset sheets to establish actual fair market value of core holdings.</p>
+                  <p class="text-xs text-slate-500">Recasting asset sheets to establish actual fair market value of core
+                    holdings.</p>
                 </div>
               </div>
             </div>
@@ -379,74 +469,93 @@
           <!-- Methodology Image / Graphic -->
           <div class="relative" data-aos="fade-left">
             <div class="absolute inset-0 bg-brand-gold/5 rounded-2xl transform translate-x-4 translate-y-4 -z-10"></div>
-            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Valuation team reviewing models" class="rounded-2xl shadow-xl w-full object-cover h-[400px]">
+            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80"
+              alt="Valuation team reviewing models" class="rounded-2xl shadow-xl w-full object-cover h-[400px]">
           </div>
         </div>
       </div>
     </section>
 
     <!-- M&A Workflow Section -->
-    <section class="py-24 px-6 md:px-12 bg-white dark:bg-brand-navy border-b border-slate-200 dark:border-slate-800/80 transition-colors">
+    <section
+      class="py-24 px-6 md:px-12 bg-white dark:bg-brand-navy border-b border-slate-200 dark:border-slate-800/80 transition-colors">
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-16" data-aos="fade-up">
           <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Deal Execution</span>
-          <h2 class="text-3xl md:text-4xl font-bold font-serif mt-2 text-slate-900 dark:text-white">Our M&A Transaction Workflow</h2>
+          <h2 class="text-3xl md:text-4xl font-bold font-serif mt-2 text-slate-900 dark:text-white">Our M&A Transaction
+            Workflow</h2>
           <div class="w-16 h-1 bg-brand-gold mx-auto mt-4"></div>
-          <p class="text-slate-500 text-sm mt-4 max-w-xl mx-auto">From strategic deal preparation to absolute closure, here is how we execute mid-market transaction campaigns.</p>
+          <p class="text-slate-500 text-sm mt-4 max-w-xl mx-auto">From strategic deal preparation to absolute closure,
+            here is how we execute mid-market transaction campaigns.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 relative">
           <!-- Step 1 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between" data-aos="fade-up">
+          <div
+            class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between"
+            data-aos="fade-up">
             <div>
               <span class="text-brand-gold font-serif font-bold text-2xl block mb-2">01</span>
               <h4 class="font-bold text-slate-900 dark:text-white text-sm">Deal Preparation</h4>
               <p class="text-slate-500 text-xs mt-2 leading-relaxed">
-                We recast earnings, audit cap sheets, build forecast models, and draft the Confidential Information Memorandum (CIM).
+                We recast earnings, audit cap sheets, build forecast models, and draft the Confidential Information
+                Memorandum (CIM).
               </p>
             </div>
           </div>
 
           <!-- Step 2 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between"
+            data-aos="fade-up" data-aos-delay="100">
             <div>
               <span class="text-brand-gold font-serif font-bold text-2xl block mb-2">02</span>
               <h4 class="font-bold text-slate-900 dark:text-white text-sm">Market Launch</h4>
               <p class="text-slate-500 text-xs mt-2 leading-relaxed">
-                We release blind teasers to targeted private equity, family offices, and strategic buyers under strict NDAs.
+                We release blind teasers to targeted private equity, family offices, and strategic buyers under strict
+                NDAs.
               </p>
             </div>
           </div>
 
           <!-- Step 3 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between"
+            data-aos="fade-up" data-aos-delay="200">
             <div>
               <span class="text-brand-gold font-serif font-bold text-2xl block mb-2">03</span>
               <h4 class="font-bold text-slate-900 dark:text-white text-sm">Bid & LOI Rounds</h4>
               <p class="text-slate-500 text-xs mt-2 leading-relaxed">
-                We manage competitive bidding rounds, review structural parameters, and negotiate strong Letters of Intent (LOI).
+                We manage competitive bidding rounds, review structural parameters, and negotiate strong Letters of
+                Intent (LOI).
               </p>
             </div>
           </div>
 
           <!-- Step 4 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+          <div
+            class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between"
+            data-aos="fade-up" data-aos-delay="300">
             <div>
               <span class="text-brand-gold font-serif font-bold text-2xl block mb-2">04</span>
               <h4 class="font-bold text-slate-900 dark:text-white text-sm">Due Diligence</h4>
               <p class="text-slate-500 text-xs mt-2 leading-relaxed">
-                We orchestrate the secure Virtual Data Room (VDR), coordinate Quality of Earnings (QofE) audits, and handle buyer diligence queries.
+                We orchestrate the secure Virtual Data Room (VDR), coordinate Quality of Earnings (QofE) audits, and
+                handle buyer diligence queries.
               </p>
             </div>
           </div>
 
           <!-- Step 5 -->
-          <div class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between md:col-span-2 lg:col-span-1" data-aos="fade-up" data-aos-delay="400">
+          <div
+            class="bg-slate-50 dark:bg-brand-midnight p-6 rounded-xl border border-slate-200/50 dark:border-slate-800/50 flex flex-col justify-between"
+            data-aos="fade-up" data-aos-delay="400">
             <div>
               <span class="text-brand-gold font-serif font-bold text-2xl block mb-2">05</span>
               <h4 class="font-bold text-slate-900 dark:text-white text-sm">Definitive Closing</h4>
               <p class="text-slate-500 text-xs mt-2 leading-relaxed">
-                We finalize corporate purchase agreements, clear working capital pegs, and coordinate secure funds transfer.
+                We finalize corporate purchase agreements, clear working capital pegs, and coordinate secure funds
+                transfer.
               </p>
             </div>
           </div>
@@ -455,48 +564,64 @@
     </section>
 
     <!-- Valuation Process Section -->
-    <section class="py-24 px-6 md:px-12 bg-slate-50 dark:bg-brand-midnight border-b border-slate-200 dark:border-slate-800/50 transition-colors">
+    <section
+      class="py-24 px-6 md:px-12 bg-slate-50 dark:bg-brand-midnight border-b border-slate-200 dark:border-slate-800/50 transition-colors">
       <div class="max-w-4xl mx-auto">
         <div class="text-center mb-16" data-aos="fade-up">
           <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Certified Appraisals</span>
-          <h2 class="text-3xl md:text-4xl font-bold font-serif mt-2 text-slate-900 dark:text-white">Our Certified Business Valuation Process</h2>
+          <h2 class="text-3xl md:text-4xl font-bold font-serif mt-2 text-slate-900 dark:text-white">Our Certified
+            Business Valuation Process</h2>
           <div class="w-16 h-1 bg-brand-gold mx-auto mt-4"></div>
-          <p class="text-slate-500 text-sm mt-4">A rigorous USPAP & ASA compliant procedure to establish IRS-defensible corporate asset pricing.</p>
+          <p class="text-slate-500 text-sm mt-4">A rigorous USPAP & ASA compliant procedure to establish IRS-defensible
+            corporate asset pricing.</p>
         </div>
 
-        <div class="space-y-12 relative before:absolute before:left-6 before:top-2 before:bottom-2 before:w-[2px] before:bg-brand-royal/20 ml-4">
+        <div
+          class="space-y-12 relative before:absolute before:left-6 before:top-2 before:bottom-2 before:w-[2px] before:bg-brand-royal/20 ml-4">
           <!-- Step 1 -->
           <div class="flex items-start relative pl-16" data-aos="fade-up">
-            <div class="absolute left-3 w-6 h-6 rounded-full bg-brand-gold border-4 border-slate-50 dark:border-brand-midnight shadow -translate-x-1/2 flex items-center justify-center"></div>
+            <div
+              class="absolute left-3 w-6 h-6 rounded-full bg-brand-gold border-4 border-slate-50 dark:border-brand-midnight shadow -translate-x-1/2 flex items-center justify-center">
+            </div>
             <div>
               <span class="text-brand-gold text-xs font-bold uppercase tracking-wider">Phase 01</span>
-              <h3 class="text-lg font-bold font-serif text-slate-900 dark:text-white mt-1">Scope Defending & Sourcing</h3>
+              <h3 class="text-lg font-bold font-serif text-slate-900 dark:text-white mt-1">Scope Defending & Sourcing
+              </h3>
               <p class="text-slate-500 text-sm mt-2">
-                We review historical balance sheets, EBITDA metrics, and operational assets to align the appraisal with target regulatory or strategic requirements.
+                We review historical balance sheets, EBITDA metrics, and operational assets to align the appraisal with
+                target regulatory or strategic requirements.
               </p>
             </div>
           </div>
 
           <!-- Step 2 -->
           <div class="flex items-start relative pl-16" data-aos="fade-up">
-            <div class="absolute left-3 w-6 h-6 rounded-full bg-brand-gold border-4 border-slate-50 dark:border-brand-midnight shadow -translate-x-1/2 flex items-center justify-center"></div>
+            <div
+              class="absolute left-3 w-6 h-6 rounded-full bg-brand-gold border-4 border-slate-50 dark:border-brand-midnight shadow -translate-x-1/2 flex items-center justify-center">
+            </div>
             <div>
               <span class="text-brand-gold text-xs font-bold uppercase tracking-wider">Phase 02</span>
-              <h3 class="text-lg font-bold font-serif text-slate-900 dark:text-white mt-1">Empirical Valuation Modeling</h3>
+              <h3 class="text-lg font-bold font-serif text-slate-900 dark:text-white mt-1">Empirical Valuation Modeling
+              </h3>
               <p class="text-slate-500 text-sm mt-2">
-                Our senior appraisers run detailed Discounted Cash Flow models, precedent transactions multiples database comparisons, and asset recasting structures.
+                Our senior appraisers run detailed Discounted Cash Flow models, precedent transactions multiples
+                database comparisons, and asset recasting structures.
               </p>
             </div>
           </div>
 
           <!-- Step 3 -->
           <div class="flex items-start relative pl-16" data-aos="fade-up">
-            <div class="absolute left-3 w-6 h-6 rounded-full bg-brand-gold border-4 border-slate-50 dark:border-brand-midnight shadow -translate-x-1/2 flex items-center justify-center"></div>
+            <div
+              class="absolute left-3 w-6 h-6 rounded-full bg-brand-gold border-4 border-slate-50 dark:border-brand-midnight shadow -translate-x-1/2 flex items-center justify-center">
+            </div>
             <div>
               <span class="text-brand-gold text-xs font-bold uppercase tracking-wider">Phase 03</span>
-              <h3 class="text-lg font-bold font-serif text-slate-900 dark:text-white mt-1">Internal Committee Audit & Certification</h3>
+              <h3 class="text-lg font-bold font-serif text-slate-900 dark:text-white mt-1">Internal Committee Audit &
+                Certification</h3>
               <p class="text-slate-500 text-sm mt-2">
-                Every draft undergoes a rigorous secondary review by our senior partners to ensure full USPAP compliance prior to certified portfolio delivery.
+                Every draft undergoes a rigorous secondary review by our senior partners to ensure full USPAP compliance
+                prior to certified portfolio delivery.
               </p>
             </div>
           </div>
@@ -508,16 +633,19 @@
     <section class="py-24 px-6 md:px-12 bg-slate-50 dark:bg-brand-midnight transition-colors overflow-hidden">
       <div class="max-w-4xl mx-auto text-center">
         <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Client Testimonials</span>
-        <h2 class="text-3xl md:text-4xl font-bold font-serif mt-2 text-slate-900 dark:text-white mb-12">Client Success Stories</h2>
+        <h2 class="text-3xl md:text-4xl font-bold font-serif mt-2 text-slate-900 dark:text-white mb-12">Client Success
+          Stories</h2>
 
         <!-- Testimonial Slider Container -->
-        <div id="testimonial-slider" class="relative bg-white dark:bg-brand-navy p-8 md:p-12 rounded-2xl shadow-xl border border-slate-200/50 dark:border-slate-800/50 min-h-[300px] flex items-center justify-center">
-          
+        <div id="testimonial-slider"
+          class="relative bg-white dark:bg-brand-navy p-8 md:p-12 rounded-2xl shadow-xl border border-slate-200/50 dark:border-slate-800/50 min-h-[300px] flex items-center justify-center">
+
           <!-- Slide 1 -->
           <div class="testimonial-slide transition-opacity duration-500 w-full">
             <div class="text-brand-gold text-5xl mb-6"><i class="fa-solid fa-quote-left"></i></div>
             <p class="text-lg md:text-xl font-serif italic text-slate-700 dark:text-slate-200">
-              "Aegis managed our transition from first valuation to absolute exit. Their team secured a strategic buyer that valued our technology at 12.5x EBITDA, exceeding our top targets."
+              "Aegis managed our transition from first valuation to absolute exit. Their team secured a strategic buyer
+              that valued our technology at 12.5x EBITDA, exceeding our top targets."
             </p>
             <div class="mt-8">
               <h4 class="font-bold text-slate-950 dark:text-white">Marcus Vance</h4>
@@ -529,11 +657,13 @@
           <div class="testimonial-slide transition-opacity duration-500 w-full hidden">
             <div class="text-brand-gold text-5xl mb-6"><i class="fa-solid fa-quote-left"></i></div>
             <p class="text-lg md:text-xl font-serif italic text-slate-700 dark:text-slate-200">
-              "Their business valuation was extremely thorough and defensible. We survived an IRS estate challenge cleanly because Aegis had built such a rigorous modeling suite."
+              "Their business valuation was extremely thorough and defensible. We survived an IRS estate challenge
+              cleanly because Aegis had built such a rigorous modeling suite."
             </p>
             <div class="mt-8">
               <h4 class="font-bold text-slate-950 dark:text-white">Helena Rostova</h4>
-              <p class="text-xs text-brand-gold uppercase tracking-wider mt-1">Managing Partner, Rostova Family Holdings</p>
+              <p class="text-xs text-brand-gold uppercase tracking-wider mt-1">Managing Partner, Rostova Family Holdings
+              </p>
             </div>
           </div>
 
@@ -541,7 +671,8 @@
           <div class="testimonial-slide transition-opacity duration-500 w-full hidden">
             <div class="text-brand-gold text-5xl mb-6"><i class="fa-solid fa-quote-left"></i></div>
             <p class="text-lg md:text-xl font-serif italic text-slate-700 dark:text-slate-200">
-              "Outstanding advisory expertise. They understood our SaaS metrics immediately, managed the due diligence process with absolute discretion, and closed the transaction within 90 days."
+              "Outstanding advisory expertise. They understood our SaaS metrics immediately, managed the due diligence
+              process with absolute discretion, and closed the transaction within 90 days."
             </p>
             <div class="mt-8">
               <h4 class="font-bold text-slate-950 dark:text-white">David Chen</h4>
@@ -561,165 +692,163 @@
       <div class="max-w-6xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
           <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Target Markets</span>
-          <h2 class="text-3xl md:text-4xl font-bold font-serif mt-2 text-slate-900 dark:text-white">Industry Sector Expertise</h2>
+          <h2 class="text-3xl md:text-4xl font-bold font-serif mt-2 text-slate-900 dark:text-white">Industry Sector
+            Expertise</h2>
           <div class="w-16 h-1 bg-brand-gold mx-auto mt-4"></div>
-          <p class="text-slate-500 text-sm mt-4">Aegis delivers specialized valuation and transactional advisory services across six core mid-market industries.</p>
+          <p class="text-slate-500 text-sm mt-4">Aegis delivers specialized valuation and transactional advisory
+            services across six core mid-market industries.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Technology & SaaS -->
-          <div class="bg-slate-50 dark:bg-brand-midnight border border-slate-200/50 dark:border-slate-800/50 rounded-xl overflow-hidden group hover:border-brand-gold transition duration-300 flex flex-col justify-between" data-aos="fade-up">
+          <div
+            class="bg-slate-50 dark:bg-brand-midnight border border-slate-200/50 dark:border-slate-800/50 rounded-xl overflow-hidden group hover:border-brand-gold transition duration-300 flex flex-col justify-between"
+            data-aos="fade-up">
             <div class="h-44 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Technology & SaaS" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+                alt="Technology & SaaS"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
             </div>
             <div class="p-6 flex-grow text-center">
               <h4 class="font-bold font-serif text-slate-900 dark:text-white text-base">Technology & SaaS</h4>
-              <p class="text-slate-500 text-xs mt-2 leading-relaxed">Valuing intellectual property, annual recurring revenues, high growth profiles, and SaaS retention metrics.</p>
+              <p class="text-slate-500 text-xs mt-2 leading-relaxed">Valuing intellectual property, annual recurring
+                revenues, high growth profiles, and SaaS retention metrics.</p>
             </div>
           </div>
 
           <!-- Healthcare & Life Sciences -->
-          <div class="bg-slate-50 dark:bg-brand-midnight border border-slate-200/50 dark:border-slate-800/50 rounded-xl overflow-hidden group hover:border-brand-gold transition duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="bg-slate-50 dark:bg-brand-midnight border border-slate-200/50 dark:border-slate-800/50 rounded-xl overflow-hidden group hover:border-brand-gold transition duration-300 flex flex-col justify-between"
+            data-aos="fade-up" data-aos-delay="100">
             <div class="h-44 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" alt="Healthcare & Life Sciences" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+              <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80"
+                alt="Healthcare & Life Sciences"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
             </div>
             <div class="p-6 flex-grow text-center">
               <h4 class="font-bold font-serif text-slate-900 dark:text-white text-base">Healthcare & Life Sciences</h4>
-              <p class="text-slate-500 text-xs mt-2 leading-relaxed">Advising medical systems, laboratories, biotech facilities, and pharmaceutical operations with regulatory adherence.</p>
+              <p class="text-slate-500 text-xs mt-2 leading-relaxed">Advising medical systems, laboratories, biotech
+                facilities, and pharmaceutical operations with regulatory adherence.</p>
             </div>
           </div>
 
           <!-- Manufacturing & Industrial -->
-          <div class="bg-slate-50 dark:bg-brand-midnight border border-slate-200/50 dark:border-slate-800/50 rounded-xl overflow-hidden group hover:border-brand-gold transition duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="bg-slate-50 dark:bg-brand-midnight border border-slate-200/50 dark:border-slate-800/50 rounded-xl overflow-hidden group hover:border-brand-gold transition duration-300 flex flex-col justify-between"
+            data-aos="fade-up" data-aos-delay="200">
             <div class="h-44 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Manufacturing & Logistics" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80"
+                alt="Manufacturing & Logistics"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
             </div>
             <div class="p-6 flex-grow text-center">
               <h4 class="font-bold font-serif text-slate-900 dark:text-white text-base">Manufacturing & Industrial</h4>
-              <p class="text-slate-500 text-xs mt-2 leading-relaxed">Managing physical plant appraisals, complex equipment depreciation, logistics assets, and capital intensity values.</p>
+              <p class="text-slate-500 text-xs mt-2 leading-relaxed">Managing physical plant appraisals, complex
+                equipment depreciation, logistics assets, and capital intensity values.</p>
             </div>
           </div>
 
           <!-- Energy & Infrastructure -->
-          <div class="bg-slate-50 dark:bg-brand-midnight border border-slate-200/50 dark:border-slate-800/50 rounded-xl overflow-hidden group hover:border-brand-gold transition duration-300 flex flex-col justify-between" data-aos="fade-up">
+          <div
+            class="bg-slate-50 dark:bg-brand-midnight border border-slate-200/50 dark:border-slate-800/50 rounded-xl overflow-hidden group hover:border-brand-gold transition duration-300 flex flex-col justify-between"
+            data-aos="fade-up">
             <div class="h-44 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=600&q=80" alt="Energy & Infrastructure" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+              <img src="https://images.pexels.com/photos/9889066/pexels-photo-9889066.jpeg"
+                alt="Energy & Infrastructure"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
             </div>
             <div class="p-6 flex-grow text-center">
               <h4 class="font-bold font-serif text-slate-900 dark:text-white text-base">Energy & Infrastructure</h4>
-              <p class="text-slate-500 text-xs mt-2 leading-relaxed">Navigating resource valuations, ESG demands, grid utilities assets, and regulatory transaction audits.</p>
+              <p class="text-slate-500 text-xs mt-2 leading-relaxed">Navigating resource valuations, ESG demands, grid
+                utilities assets, and regulatory transaction audits.</p>
             </div>
           </div>
 
           <!-- Business Services -->
-          <div class="bg-slate-50 dark:bg-brand-midnight border border-slate-200/50 dark:border-slate-800/50 rounded-xl overflow-hidden group hover:border-brand-gold transition duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="bg-slate-50 dark:bg-brand-midnight border border-slate-200/50 dark:border-slate-800/50 rounded-xl overflow-hidden group hover:border-brand-gold transition duration-300 flex flex-col justify-between"
+            data-aos="fade-up" data-aos-delay="100">
             <div class="h-44 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Business Services" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
+                alt="Business Services"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
             </div>
             <div class="p-6 flex-grow text-center">
               <h4 class="font-bold font-serif text-slate-900 dark:text-white text-base">Business Services</h4>
-              <p class="text-slate-500 text-xs mt-2 leading-relaxed">Valuing contractual recurring revenue streams, consulting models, staffing agencies, and human capital assets.</p>
+              <p class="text-slate-500 text-xs mt-2 leading-relaxed">Valuing contractual recurring revenue streams,
+                consulting models, staffing agencies, and human capital assets.</p>
             </div>
           </div>
 
           <!-- Logistics & Distribution -->
-          <div class="bg-slate-50 dark:bg-brand-midnight border border-slate-200/50 dark:border-slate-800/50 rounded-xl overflow-hidden group hover:border-brand-gold transition duration-300 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="bg-slate-50 dark:bg-brand-midnight border border-slate-200/50 dark:border-slate-800/50 rounded-xl overflow-hidden group hover:border-brand-gold transition duration-300 flex flex-col justify-between"
+            data-aos="fade-up" data-aos-delay="200">
             <div class="h-44 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80" alt="Logistics & Distribution" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+              <img src="https://images.pexels.com/photos/4483775/pexels-photo-4483775.jpeg"
+                alt="Logistics & Distribution"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
             </div>
             <div class="p-6 flex-grow text-center">
               <h4 class="font-bold font-serif text-slate-900 dark:text-white text-base">Logistics & Distribution</h4>
-              <p class="text-slate-500 text-xs mt-2 leading-relaxed">Analyzing supply chain durability, fleet capacity values, warehousing leases, and regional distribution networks.</p>
+              <p class="text-slate-500 text-xs mt-2 leading-relaxed">Analyzing supply chain durability, fleet capacity
+                values, warehousing leases, and regional distribution networks.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Client Engagement Roadmap Section -->
+    <!-- Executive Perspective Section -->
     <section class="py-24 px-6 md:px-12 bg-slate-50 dark:bg-brand-midnight/40 border-t border-slate-200 dark:border-slate-800 transition-colors">
-      <div class="max-w-6xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
-          <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Client Engagement</span>
-          <h2 class="text-3xl md:text-4xl font-bold font-serif mt-2 text-slate-900 dark:text-white">How to Engage with Aegis</h2>
-          <div class="w-16 h-1 bg-brand-gold mx-auto mt-4"></div>
-          <p class="text-slate-500 text-sm mt-4">Our onboarding process is designed to protect your privacy and establish absolute deal clarity from day one.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <!-- Step 1 -->
-          <div class="bg-white dark:bg-brand-navy rounded-xl border border-slate-200/50 dark:border-slate-800/80 hover-glow overflow-hidden flex flex-col justify-between" data-aos="fade-up">
-            <div class="h-36 overflow-hidden relative group">
-              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Confidential Call" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
-              <span class="absolute top-3 left-3 bg-brand-gold text-brand-navy font-bold text-[10px] uppercase tracking-wider px-2 py-1 rounded shadow-md">Step I</span>
-            </div>
-            <div class="p-6 flex-grow">
-              <h4 class="font-bold text-slate-900 dark:text-white text-sm">Confidential Call</h4>
-              <p class="text-slate-500 text-xs mt-2 leading-relaxed">
-                Schedule an initial consultation call with a senior partner to discuss your target transaction or appraisal requirements.
-              </p>
+      <div class="max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-10 items-center">
+          
+          <!-- Large Stylized Quote (7 columns) -->
+          <div class="md:col-span-8 space-y-6" data-aos="fade-right">
+            <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Executive Perspective</span>
+            <blockquote class="text-2xl md:text-3xl font-serif italic text-slate-900 dark:text-white leading-relaxed relative">
+              <span class="absolute -top-6 -left-6 text-brand-gold/15 text-7xl font-serif">“</span>
+              Valuation is not merely a set of numerical models, but the strategic translation of a company's legacy, market position, and future trajectory into defensible value.
+              <span class="absolute -bottom-10 right-4 text-brand-gold/15 text-7xl font-serif">”</span>
+            </blockquote>
+            <div class="pt-2">
+              <p class="font-bold text-slate-900 dark:text-white text-base">Alistair Vance</p>
+              <p class="text-brand-gold text-xs uppercase tracking-wider mt-0.5">Founder & Managing Partner</p>
             </div>
           </div>
 
-          <!-- Step 2 -->
-          <div class="bg-white dark:bg-brand-navy rounded-xl border border-slate-200/50 dark:border-slate-800/80 hover-glow overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
-            <div class="h-36 overflow-hidden relative group">
-              <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80" alt="Secure Mutual NDA" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
-              <span class="absolute top-3 left-3 bg-brand-gold text-brand-navy font-bold text-[10px] uppercase tracking-wider px-2 py-1 rounded shadow-md">Step II</span>
-            </div>
-            <div class="p-6 flex-grow">
-              <h4 class="font-bold text-slate-900 dark:text-white text-sm">Secure Mutual NDA</h4>
-              <p class="text-slate-500 text-xs mt-2 leading-relaxed">
-                Prior to discussing any proprietary metrics, we sign a mutual NDA to protect your private corporate data.
-              </p>
-            </div>
+          <!-- Supporting Editorial Paragraphs (4 columns) -->
+          <div class="md:col-span-4 space-y-4 text-slate-600 dark:text-slate-400 text-sm leading-relaxed" data-aos="fade-left">
+            <p>
+              Our firm's foundation rests upon absolute confidentiality and fiduciary alignment. We believe that mid-market business owners deserve the same level of sophisticated representation typically reserved for enterprise-level transactions.
+            </p>
+            <p>
+              By combining certified appraisal methodologies with active investment banking sell-side execution, we ensure that every strategic option is fully quantified, audited, and defensible from day one.
+            </p>
           </div>
 
-          <!-- Step 3 -->
-          <div class="bg-white dark:bg-brand-navy rounded-xl border border-slate-200/50 dark:border-slate-800/80 hover-glow overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
-            <div class="h-36 overflow-hidden relative group">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Enterprise Discovery" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
-              <span class="absolute top-3 left-3 bg-brand-gold text-brand-navy font-bold text-[10px] uppercase tracking-wider px-2 py-1 rounded shadow-md">Step III</span>
-            </div>
-            <div class="p-6 flex-grow">
-              <h4 class="font-bold text-slate-900 dark:text-white text-sm">Enterprise Discovery</h4>
-              <p class="text-slate-500 text-xs mt-2 leading-relaxed">
-                Our analysts perform a high-level review of recent performance, balance sheets, and capital demands.
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="bg-white dark:bg-brand-navy rounded-xl border border-slate-200/50 dark:border-slate-800/80 hover-glow overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
-            <div class="h-36 overflow-hidden relative group">
-              <img src="https://images.unsplash.com/photo-1521791136368-1a46827d0adb?auto=format&fit=crop&w=600&q=80" alt="Advisory Mandate" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
-              <span class="absolute top-3 left-3 bg-brand-gold text-brand-navy font-bold text-[10px] uppercase tracking-wider px-2 py-1 rounded shadow-md">Step IV</span>
-            </div>
-            <div class="p-6 flex-grow">
-              <h4 class="font-bold text-slate-900 dark:text-white text-sm">Advisory Mandate</h4>
-              <p class="text-slate-500 text-xs mt-2 leading-relaxed">
-                We define clear engagement parameters, confirm fee structures, and formally launch the valuation or M&A campaign.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
     <!-- Call to Action Section / Valuation Estimator -->
-    <section class="py-20 px-6 md:px-12 bg-gradient-to-r from-brand-navy via-brand-midnight to-brand-navy text-white relative overflow-hidden">
+    <section
+      class="py-20 px-6 md:px-12 bg-gradient-to-r from-brand-navy via-brand-midnight to-brand-navy text-white relative overflow-hidden">
       <div class="absolute inset-0 opacity-10 pointer-events-none">
         <div class="absolute top-0 right-0 w-80 h-80 bg-brand-gold rounded-full blur-3xl"></div>
       </div>
       <div class="max-w-6xl mx-auto relative z-10 grid lg:grid-cols-12 gap-12 items-center" data-aos="zoom-in">
         <!-- Left Column -->
         <div class="lg:col-span-6 space-y-6 text-left rtl:text-right">
-          <span class="inline-block px-3 py-1 bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-xs font-semibold tracking-widest uppercase rounded-full">
+          <span
+            class="inline-block px-3 py-1 bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-xs font-semibold tracking-widest uppercase rounded-full">
             Secure Strategic Review
           </span>
           <h2 class="text-3xl md:text-5xl font-bold font-serif leading-tight">Estimate Your Valuation Potential</h2>
           <p class="text-slate-300 text-base md:text-lg max-w-xl">
-            Complete our secure, confidential checklist to receive an initial mid-market multiple range and schedule a partner-led consultation.
+            Complete our secure, confidential checklist to receive an initial mid-market multiple range and schedule a
+            partner-led consultation.
           </p>
           <div class="flex items-center space-x-3 rtl:space-x-reverse text-xs text-slate-400">
             <i class="fa-solid fa-lock text-brand-gold"></i>
@@ -729,12 +858,15 @@
 
         <!-- Right Column (Interactive Glassmorphic Form) -->
         <div class="lg:col-span-6">
-          <div class="glass-panel p-8 rounded-2xl border border-white/10 relative overflow-hidden bg-brand-navy/60 backdrop-blur-md">
+          <div
+            class="glass-panel p-8 rounded-2xl border border-white/10 relative overflow-hidden bg-brand-navy/60 backdrop-blur-md">
             <!-- Form State -->
             <form class="valuation-estimator-form space-y-4">
               <div>
-                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Annual Revenue Range</label>
-                <select required class="estimator-revenue w-full bg-slate-900 border border-slate-700/80 text-white text-sm rounded px-4 py-2.5 focus:outline-none focus:border-brand-gold transition">
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Annual Revenue
+                  Range</label>
+                <select required
+                  class="estimator-revenue w-full bg-slate-900 border border-slate-700/80 text-white text-sm rounded px-4 py-2.5 focus:outline-none focus:border-brand-gold transition">
                   <option value="" disabled selected>Select Revenue Range</option>
                   <option value="5-20">$5M - $20M</option>
                   <option value="20-50">$20M - $50M</option>
@@ -745,8 +877,10 @@
               </div>
 
               <div>
-                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Primary Sector</label>
-                <select required class="estimator-sector w-full bg-slate-900 border border-slate-700/80 text-white text-sm rounded px-4 py-2.5 focus:outline-none focus:border-brand-gold transition">
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Primary
+                  Sector</label>
+                <select required
+                  class="estimator-sector w-full bg-slate-900 border border-slate-700/80 text-white text-sm rounded px-4 py-2.5 focus:outline-none focus:border-brand-gold transition">
                   <option value="" disabled selected>Select Industry Sector</option>
                   <option value="tech">Technology & SaaS</option>
                   <option value="health">Healthcare & Life Sciences</option>
@@ -757,32 +891,42 @@
               </div>
 
               <div>
-                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Professional Email</label>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Professional
+                  Email</label>
                 <div class="relative">
-                  <input type="email" required placeholder="Enter professional email" class="estimator-email w-full bg-slate-900 border border-slate-700/80 text-white text-sm rounded px-4 py-2.5 focus:outline-none focus:border-brand-gold transition">
+                  <input type="email" required placeholder="Enter professional email"
+                    class="estimator-email w-full bg-slate-900 border border-slate-700/80 text-white text-sm rounded px-4 py-2.5 focus:outline-none focus:border-brand-gold transition">
                   <span class="estimator-email-error text-[10px] text-red-500 block mt-1"></span>
                 </div>
               </div>
 
-              <button type="submit" class="w-full bg-brand-gold hover:bg-white text-brand-navy hover:text-brand-navy text-xs font-bold uppercase tracking-widest py-3 rounded transition duration-300">
+              <button type="submit"
+                class="w-full bg-brand-gold hover:bg-white text-brand-navy hover:text-brand-navy text-xs font-bold uppercase tracking-widest py-3 rounded transition duration-300">
                 Calculate & Request Session
               </button>
             </form>
 
             <!-- Success/Result State (hidden by default) -->
             <div class="estimator-result hidden space-y-6 text-center py-4">
-              <div class="w-16 h-16 bg-brand-gold/10 text-brand-gold rounded-full flex items-center justify-center mx-auto text-2xl">
+              <div
+                class="w-16 h-16 bg-brand-gold/10 text-brand-gold rounded-full flex items-center justify-center mx-auto text-2xl">
                 <i class="fa-solid fa-calculator"></i>
               </div>
               <div class="space-y-2">
                 <h3 class="text-xl font-bold font-serif text-white">Estimated Valuation Multiple</h3>
-                <p class="estimator-multiple-range text-3xl font-extrabold text-brand-gold tracking-wider">8.5x - 11.5x EBITDA</p>
-                <p class="text-xs text-slate-400">Based on recent peer transactions in <span class="estimator-result-sector text-white">Technology</span> sector.</p>
+                <p class="estimator-multiple-range text-3xl font-extrabold text-brand-gold tracking-wider">8.5x - 11.5x
+                  EBITDA</p>
+                <p class="text-xs text-slate-400">Based on recent peer transactions in <span
+                    class="estimator-result-sector text-white">Technology</span> sector.</p>
               </div>
-              <div class="p-4 bg-brand-gold/5 border border-brand-gold/20 rounded-lg text-xs text-slate-300 text-left rtl:text-right">
-                A customized analysis brief has been prepared for <strong class="estimator-result-email text-white"></strong>. A senior advisor will contact you within 24 hours.
+              <div
+                class="p-4 bg-brand-gold/5 border border-brand-gold/20 rounded-lg text-xs text-slate-300 text-left rtl:text-right">
+                A customized analysis brief has been prepared for <strong
+                  class="estimator-result-email text-white"></strong>. A senior advisor will contact you within 24
+                hours.
               </div>
-              <button type="button" class="estimator-reset-btn text-xs text-brand-gold hover:text-white underline font-semibold transition">
+              <button type="button"
+                class="estimator-reset-btn text-xs text-brand-gold hover:text-white underline font-semibold transition">
                 Recalculate Estimate
               </button>
             </div>
@@ -793,16 +937,19 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-white dark:bg-brand-navy text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800 py-16 px-6 md:px-12">
+  <footer
+    class="bg-white dark:bg-brand-navy text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800 py-16 px-6 md:px-12">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- Col 1: Overview -->
       <div class="space-y-4">
-        <a href="index.html" class="flex items-center space-x-2 text-xl font-bold font-serif text-slate-900 dark:text-white tracking-wider">
+        <a href="index.html"
+          class="flex items-center space-x-2 text-xl font-bold font-serif text-slate-900 dark:text-white tracking-wider">
           <img src="logo.png" alt="Aegis Logo" class="h-8 w-auto rounded">
           <span>AEGIS</span>
         </a>
         <p class="text-sm text-slate-400">
-          Premier corporate finance advisors delivering defensible valuations, precise M&A buy-side/sell-side execution, and private equity access for mid-market leaders.
+          Premier corporate finance advisors delivering defensible valuations, precise M&A buy-side/sell-side execution,
+          and private equity access for mid-market leaders.
         </p>
         <div class="flex space-x-4 rtl:space-x-reverse text-lg text-slate-400">
           <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-linkedin"></i></a>
@@ -840,13 +987,16 @@
       <!-- Col 4: Newsletter -->
       <div class="space-y-4">
         <h4 class="font-bold text-slate-900 dark:text-white font-serif tracking-wider mb-4">Market Insights</h4>
-        <p class="text-sm">Subscribe to receive private transaction insights and mid-market exit briefs. Fully confidential.</p>
+        <p class="text-sm">Subscribe to receive private transaction insights and mid-market exit briefs. Fully
+          confidential.</p>
         <form class="validated-form relative flex flex-col space-y-2">
           <div class="relative">
-            <input type="email" required placeholder="Enter professional email" class="w-full bg-slate-900 border border-slate-700/50 text-white text-xs px-3 py-2.5 rounded focus:outline-none focus:border-brand-gold transition">
+            <input type="email" required placeholder="Enter professional email"
+              class="w-full bg-slate-900 border border-slate-700/50 text-white text-xs px-3 py-2.5 rounded focus:outline-none focus:border-brand-gold transition">
             <span class="error-message text-[10px] text-red-500 block mt-1"></span>
           </div>
-          <button type="submit" class="bg-brand-gold hover:bg-white text-brand-navy hover:text-brand-navy text-xs font-semibold uppercase tracking-wider py-2.5 rounded transition">
+          <button type="submit"
+            class="bg-brand-gold hover:bg-white text-brand-navy hover:text-brand-navy text-xs font-semibold uppercase tracking-wider py-2.5 rounded transition">
             Subscribe
           </button>
           <div class="form-success-banner hidden text-[11px] text-brand-gold font-semibold mt-2">
@@ -857,8 +1007,10 @@
     </div>
 
     <!-- Bottom footer details -->
-    <div class="max-w-6xl mx-auto border-t border-slate-200 dark:border-slate-800/80 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500">
-      <p>&copy; 2026 Aegis LLC. All rights reserved. Professional advisory services are governed by engagement terms.</p>
+    <div
+      class="max-w-6xl mx-auto border-t border-slate-200 dark:border-slate-800/80 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500">
+      <p>&copy; 2026 Aegis LLC. All rights reserved. Professional advisory services are governed by engagement terms.
+      </p>
       <div class="flex space-x-4 rtl:space-x-reverse mt-4 md:mt-0">
         <a href="#" class="hover:text-slate-300">Privacy Policy</a>
         <span>&bull;</span>
@@ -868,7 +1020,9 @@
   </footer>
 
   <!-- Scroll To Top Button -->
-  <button id="scroll-to-top" class="fixed bottom-6 right-6 z-40 bg-brand-gold text-brand-navy p-3 rounded-full shadow-lg opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:bg-white" aria-label="Scroll to top">
+  <button id="scroll-to-top"
+    class="fixed bottom-6 right-6 z-40 bg-brand-gold text-brand-navy p-3 rounded-full shadow-lg opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:bg-white"
+    aria-label="Scroll to top">
     <i class="fa-solid fa-arrow-up text-base"></i>
   </button>
 
@@ -883,4 +1037,5 @@
   <!-- Main Script -->
   <script src="main.js" defer></script>
 </body>
+
 </html>
