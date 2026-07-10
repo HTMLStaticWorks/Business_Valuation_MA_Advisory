@@ -35,14 +35,14 @@ h1, h2, h3, h4, h5, h6, .font-serif {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #080D1A;
+  background: #09100F;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2B527E;
+  background: #143E35;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #B89D70; /* Muted Brushed Brass hover */
+  background: #C5A880; /* Muted Brushed Brass hover */
 }
 
 /* Glassmorphism Accents */
@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6, .font-serif {
 }
 
 .dark .glass-panel {
-  background: rgba(8, 13, 26, 0.5);
+  background: rgba(9, 16, 15, 0.5);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -153,14 +153,14 @@ h1, h2, h3, h4, h5, h6, .font-serif {
 }
 
 .dark #header.scrolled {
-  background-color: rgba(0, 0, 0, 0.85) !important;
+  background-color: rgba(9, 16, 15, 0.85) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Global Dark Mode overrides for pure black backgrounds */
 html.dark,
 .dark body {
-  background-color: #000000 !important;
+  background-color: #09100F !important;
 }
 
 /* Base backgrounds */
@@ -168,7 +168,7 @@ html.dark,
 .dark .dark\:bg-brand-navy,
 .dark [class*="bg-brand-navy"],
 .dark [class*="dark:bg-brand-navy"] {
-  background-color: #000000 !important;
+  background-color: #09100F !important;
 }
 
 /* Secondary dark background (Midnight) becomes slightly elevated black for layout hierarchy */
@@ -176,30 +176,30 @@ html.dark,
 .dark .dark\:bg-brand-midnight,
 .dark [class*="bg-brand-midnight"],
 .dark [class*="dark:bg-brand-midnight"] {
-  background-color: #080808 !important;
+  background-color: #0E1715 !important;
 }
 
 /* Card components like tombstones, blog articles, testimonial slides, accordions, etc. */
 .dark .bg-slate-50,
 .dark .dark\:bg-brand-midnight,
 .dark .bg-white {
-  background-color: #080808 !important;
+  background-color: #0E1715 !important;
 }
 
 .dark .glass-panel {
-  background: rgba(0, 0, 0, 0.6) !important;
+  background: rgba(9, 16, 15, 0.6) !important;
   border-color: rgba(255, 255, 255, 0.05) !important;
 }
 
 .dark footer {
-  background-color: #000000 !important;
+  background-color: #09100F !important;
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
 .dark input,
 .dark textarea,
 .dark select {
-  background-color: #030303 !important;
+  background-color: #050908 !important;
 }
 
 /* Hero section gradients override in dark mode */
@@ -229,9 +229,9 @@ html.dark,
 }
 
 /* Custom Tailwind utility override for home2.html hero middle gradient color */
-.dark .via-\[\#0E1626\] {
+.dark .via-\[\#0E1715\] {
   --tw-gradient-to: rgba(0, 0, 0, 0) !important;
-  --tw-gradient-stops: var(--tw-gradient-from), #030303 var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), #050908 var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
 }
 
 
@@ -273,7 +273,7 @@ footer h4.text-slate-900 {
 }
 
 .dark footer a:hover {
-  color: #B89D70 !important; /* Maintain muted brushed brass color on hover */
+  color: #C5A880 !important; /* Maintain muted brushed brass color on hover */
 }
 
 /* Force tombstone cards to always center-align text in LTR and RTL */
