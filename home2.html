@@ -45,6 +45,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
+  <style>
+    .tombstone-card.unique-align,
+    .tombstone-card.unique-align * {
+      text-align: left !important;
+    }
+    [dir="rtl"] .tombstone-card.unique-align,
+    [dir="rtl"] .tombstone-card.unique-align * {
+      text-align: right !important;
+    }
+  </style>
   <link rel="icon" type="image/png" href="logo.png">
 </head>
 <body class="bg-slate-50 dark:bg-brand-navy text-slate-800 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
@@ -317,62 +327,62 @@
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <!-- Tombstone 1 -->
-          <div class="tombstone-card unique-align bg-white dark:bg-brand-navy p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md text-left rtl:text-right flex flex-col justify-between min-h-[250px] relative hover:border-brand-gold transition duration-300">
-            <p class="text-sm uppercase text-brand-gold tracking-widest font-bold">SaaS & Enterprise Software</p>
-            <div class="my-6">
-              <h4 class="font-bold text-2xl text-slate-900 dark:text-white font-serif">OPSGRID</h4>
-              <p class="text-sm text-slate-400 my-2">Acquired by</p>
-              <h5 class="font-bold text-lg text-slate-700 dark:text-slate-300">INTELLIGENT DYNAMICS</h5>
+          <div class="tombstone-card unique-align bg-white dark:bg-brand-navy p-8 rounded-xl border border-slate-200 dark:border-slate-800 border-t-4 border-t-blue-500 shadow-md text-left rtl:text-right flex flex-col justify-between min-h-[250px] relative hover:border-brand-gold transition duration-300">
+            <p class="text-sm uppercase text-brand-gold tracking-widest font-bold text-left rtl:text-right">SaaS & Enterprise Software</p>
+            <div class="my-6 text-left rtl:text-right">
+              <h4 class="font-bold text-2xl text-slate-900 dark:text-white font-serif text-left rtl:text-right">OPSGRID</h4>
+              <p class="text-sm text-slate-400 my-2 text-left rtl:text-right">Acquired by</p>
+              <h5 class="font-bold text-lg text-slate-700 dark:text-slate-300 text-left rtl:text-right">INTELLIGENT DYNAMICS</h5>
             </div>
-            <div>
+            <div class="text-left rtl:text-right">
               <div class="w-8 h-[1px] bg-slate-300 dark:bg-slate-700 my-2"></div>
-              <p class="text-lg font-bold text-slate-900 dark:text-white font-serif">$145,000,000</p>
-              <p class="text-sm text-slate-400 mt-1">Sell-Side Advisor</p>
+              <p class="text-lg font-bold text-slate-900 dark:text-white font-serif text-left rtl:text-right">$145,000,000</p>
+              <p class="text-sm text-slate-400 mt-1 text-left rtl:text-right">Sell-Side Advisor</p>
             </div>
           </div>
 
           <!-- Tombstone 2 -->
-          <div class="tombstone-card unique-align bg-white dark:bg-brand-navy p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md text-left rtl:text-right flex flex-col justify-between min-h-[250px] relative hover:border-brand-gold transition duration-300">
-            <p class="text-sm uppercase text-brand-gold tracking-widest font-bold">Healthcare & Medtech</p>
-            <div class="my-6">
-              <h4 class="font-bold text-2xl text-slate-900 dark:text-white font-serif">PHARMACARE</h4>
-              <p class="text-sm text-slate-400 my-2">Recapitalized by</p>
-              <h5 class="font-bold text-lg text-slate-700 dark:text-slate-300">HALO VENTURES</h5>
+          <div class="tombstone-card unique-align bg-white dark:bg-brand-navy p-8 rounded-xl border border-slate-200 dark:border-slate-800 border-t-4 border-t-brand-teal shadow-md text-left rtl:text-right flex flex-col justify-between min-h-[250px] relative hover:border-brand-gold transition duration-300">
+            <p class="text-sm uppercase text-brand-gold tracking-widest font-bold text-left rtl:text-right">Healthcare & Medtech</p>
+            <div class="my-6 text-left rtl:text-right">
+              <h4 class="font-bold text-2xl text-slate-900 dark:text-white font-serif text-left rtl:text-right">PHARMACARE</h4>
+              <p class="text-sm text-slate-400 my-2 text-left rtl:text-right">Recapitalized by</p>
+              <h5 class="font-bold text-lg text-slate-700 dark:text-slate-300 text-left rtl:text-right">HALO VENTURES</h5>
             </div>
-            <div>
+            <div class="text-left rtl:text-right">
               <div class="w-8 h-[1px] bg-slate-300 dark:bg-slate-700 my-2"></div>
-              <p class="text-lg font-bold text-slate-900 dark:text-white font-serif">$82,500,000</p>
-              <p class="text-sm text-slate-400 mt-1">Transaction Advisor</p>
+              <p class="text-lg font-bold text-slate-900 dark:text-white font-serif text-left rtl:text-right">$82,500,000</p>
+              <p class="text-sm text-slate-400 mt-1 text-left rtl:text-right">Transaction Advisor</p>
             </div>
           </div>
 
           <!-- Tombstone 3 -->
-          <div class="tombstone-card unique-align bg-white dark:bg-brand-navy p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md text-left rtl:text-right flex flex-col justify-between min-h-[250px] relative hover:border-brand-gold transition duration-300">
-            <p class="text-sm uppercase text-brand-gold tracking-widest font-bold">Advanced Manufacturing</p>
-            <div class="my-6">
-              <h4 class="font-bold text-2xl text-slate-900 dark:text-white font-serif">VORTEX MFG</h4>
-              <p class="text-sm text-slate-400 my-2">Acquired by</p>
-              <h5 class="font-bold text-lg text-slate-700 dark:text-slate-300">GLOBAL INDUSTRIAL PARTNERS</h5>
+          <div class="tombstone-card unique-align bg-white dark:bg-brand-navy p-8 rounded-xl border border-slate-200 dark:border-slate-800 border-t-4 border-t-brand-gold shadow-md text-left rtl:text-right flex flex-col justify-between min-h-[250px] relative hover:border-brand-gold transition duration-300">
+            <p class="text-sm uppercase text-brand-gold tracking-widest font-bold text-left rtl:text-right">Advanced Manufacturing</p>
+            <div class="my-6 text-left rtl:text-right">
+              <h4 class="font-bold text-2xl text-slate-900 dark:text-white font-serif text-left rtl:text-right">VORTEX MFG</h4>
+              <p class="text-sm text-slate-400 my-2 text-left rtl:text-right">Acquired by</p>
+              <h5 class="font-bold text-lg text-slate-700 dark:text-slate-300 text-left rtl:text-right">GLOBAL INDUSTRIAL PARTNERS</h5>
             </div>
-            <div>
+            <div class="text-left rtl:text-right">
               <div class="w-8 h-[1px] bg-slate-300 dark:bg-slate-700 my-2"></div>
-              <p class="text-lg font-bold text-slate-900 dark:text-white font-serif">$210,000,000</p>
-              <p class="text-sm text-slate-400 mt-1">Buy-Side Advisor</p>
+              <p class="text-lg font-bold text-slate-900 dark:text-white font-serif text-left rtl:text-right">$210,000,000</p>
+              <p class="text-sm text-slate-400 mt-1 text-left rtl:text-right">Buy-Side Advisor</p>
             </div>
           </div>
 
           <!-- Tombstone 4 -->
-          <div class="tombstone-card unique-align bg-white dark:bg-brand-navy p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md text-left rtl:text-right flex flex-col justify-between min-h-[250px] relative hover:border-brand-gold transition duration-300">
-            <p class="text-sm uppercase text-brand-gold tracking-widest font-bold">Logistics & Supply Chain</p>
-            <div class="my-6">
-              <h4 class="font-bold text-2xl text-slate-900 dark:text-white font-serif">CARGOX</h4>
-              <p class="text-sm text-slate-400 my-2">Acquired by</p>
-              <h5 class="font-bold text-lg text-slate-700 dark:text-slate-300">LOGIX CO</h5>
+          <div class="tombstone-card unique-align bg-white dark:bg-brand-navy p-8 rounded-xl border border-slate-200 dark:border-slate-800 border-t-4 border-t-purple-500 shadow-md text-left rtl:text-right flex flex-col justify-between min-h-[250px] relative hover:border-brand-gold transition duration-300">
+            <p class="text-sm uppercase text-brand-gold tracking-widest font-bold text-left rtl:text-right">Logistics & Supply Chain</p>
+            <div class="my-6 text-left rtl:text-right">
+              <h4 class="font-bold text-2xl text-slate-900 dark:text-white font-serif text-left rtl:text-right">CARGOX</h4>
+              <p class="text-sm text-slate-400 my-2 text-left rtl:text-right">Acquired by</p>
+              <h5 class="font-bold text-lg text-slate-700 dark:text-slate-300 text-left rtl:text-right">LOGIX CO</h5>
             </div>
-            <div>
+            <div class="text-left rtl:text-right">
               <div class="w-8 h-[1px] bg-slate-300 dark:bg-slate-700 my-2"></div>
-              <p class="text-lg font-bold text-slate-900 dark:text-white font-serif">$64,000,000</p>
-              <p class="text-sm text-slate-400 mt-1">Sell-Side Advisor</p>
+              <p class="text-lg font-bold text-slate-900 dark:text-white font-serif text-left rtl:text-right">$64,000,000</p>
+              <p class="text-sm text-slate-400 mt-1 text-left rtl:text-right">Sell-Side Advisor</p>
             </div>
           </div>
         </div>

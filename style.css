@@ -282,3 +282,24 @@ footer h4.text-slate-900 {
   text-align: center !important;
 }
 
+/* Force unique-align tombstone cards to align text-left in LTR and text-right in RTL */
+.tombstone-card.unique-align,
+.tombstone-card.unique-align * {
+  text-align: left !important;
+}
+
+[dir="rtl"] .tombstone-card.unique-align,
+[dir="rtl"] .tombstone-card.unique-align * {
+  text-align: right !important;
+}
+
+/* Fix mobile and tablet view top spacing issues by reducing excessive padding above content */
+@media (max-w: 1023px) {
+  main {
+    padding-top: 4rem !important; /* Reduce main top padding to clear smaller mobile header */
+  }
+  main > section:first-of-type {
+    padding-top: 3rem !important; /* Reduce first section's top padding to pull content up */
+  }
+}
+
