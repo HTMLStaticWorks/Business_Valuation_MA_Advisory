@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6, .font-serif {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #071A10;
+  background: #0a2216;
 }
 ::-webkit-scrollbar-thumb {
   background: #059669;
@@ -153,14 +153,14 @@ h1, h2, h3, h4, h5, h6, .font-serif {
 }
 
 .dark #header.scrolled {
-  background-color: rgba(7, 26, 16, 0.85) !important;
+  background-color: rgba(10, 34, 22, 0.85) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Global Dark Mode overrides for pure black backgrounds */
 html.dark,
 .dark body {
-  background-color: #071A10 !important;
+  background-color: #0a2216 !important;
 }
 
 /* Base backgrounds */
@@ -168,7 +168,7 @@ html.dark,
 .dark .dark\:bg-brand-navy,
 .dark [class*="bg-brand-navy"],
 .dark [class*="dark:bg-brand-navy"] {
-  background-color: #071A10 !important;
+  background-color: #0a2216 !important;
 }
 
 /* Secondary dark background (Midnight) becomes slightly elevated black for layout hierarchy */
@@ -176,30 +176,46 @@ html.dark,
 .dark .dark\:bg-brand-midnight,
 .dark [class*="bg-brand-midnight"],
 .dark [class*="dark:bg-brand-midnight"] {
-  background-color: #0F2B1A !important;
+  background-color: #123824 !important;
 }
 
 /* Card components like tombstones, blog articles, testimonial slides, accordions, etc. */
 .dark .bg-slate-50,
 .dark .dark\:bg-brand-midnight,
 .dark .bg-white {
-  background-color: #0F2B1A !important;
+  background-color: #123824 !important;
 }
 
 .dark .glass-panel {
-  background: rgba(7, 26, 16, 0.6) !important;
-  border-color: rgba(255, 255, 255, 0.05) !important;
+  background: rgba(10, 34, 22, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Make card outer borders/layouts brighter and highly visible in dark mode */
+.dark .border-slate-200,
+.dark .border-slate-200\/50,
+.dark .border-slate-800,
+.dark .border-slate-800\/50,
+.dark .border-slate-800\/80,
+.dark [class*="border-slate-800"] {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Elevate card depth in dark mode with refined drop shadows */
+.dark .tombstone-card,
+.dark [class*="rounded-xl"] {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5) !important;
 }
 
 .dark footer {
-  background-color: #071A10 !important;
+  background-color: #0a2216 !important;
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
 .dark input,
 .dark textarea,
 .dark select {
-  background-color: #030D07 !important;
+  background-color: #06160e !important;
 }
 
 /* Hero section gradients override in dark mode */
@@ -229,9 +245,9 @@ html.dark,
 }
 
 /* Custom Tailwind utility override for home2.html hero middle gradient color */
-.dark .via-\[\#0F2B1A\] {
+.dark .via-\[\#123824\] {
   --tw-gradient-to: rgba(0, 0, 0, 0) !important;
-  --tw-gradient-stops: var(--tw-gradient-from), #030D07 var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), #06160e var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
 }
 
 
@@ -301,5 +317,16 @@ footer h4.text-slate-900 {
   main > section:first-of-type {
     padding-top: 3rem !important; /* Reduce first section's top padding to pull content up */
   }
+}
+
+/* Make all body text and paragraphs significantly brighter in dark mode */
+.dark p,
+.dark .text-slate-400,
+.dark .text-slate-500,
+.dark .text-slate-600,
+.dark [class*="text-slate-400"],
+.dark [class*="text-slate-500"],
+.dark [class*="text-slate-600"] {
+  color: #e2e8f0 !important; /* slate-200 for clean, highly legible body text */
 }
 

@@ -21,8 +21,8 @@
         extend: {
           colors: {
             brand: {
-              navy: '#071A10',
-              midnight: '#0F2B1A',
+              navy: '#0a2216',
+              midnight: '#123824',
               royal: '#059669',
               slate: '#64748B',
               teal: '#10B981',
@@ -46,13 +46,11 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
   <style>
-    .tombstone-card.unique-align,
-    .tombstone-card.unique-align * {
-      text-align: left !important;
+    .tombstone-card.unique-align {
+      text-align: left;
     }
-    [dir="rtl"] .tombstone-card.unique-align,
-    [dir="rtl"] .tombstone-card.unique-align * {
-      text-align: right !important;
+    [dir="rtl"] .tombstone-card.unique-align {
+      text-align: right;
     }
   </style>
   <link rel="icon" type="image/png" href="logo.png">
@@ -159,7 +157,7 @@
 
   <main class="flex-grow pt-20">
     <!-- Alternative Hero Section -->
-    <section class="relative min-h-[85vh] flex items-center justify-start py-24 px-6 md:px-12 bg-gradient-to-r from-brand-navy via-[#0F2B1A] to-transparent text-white">
+    <section class="relative min-h-[85vh] flex items-center justify-start py-24 px-6 md:px-12 bg-gradient-to-r from-brand-navy via-[#123824] to-transparent text-white">
       <div class="absolute inset-0 z-0">
         <!-- Overlay image -->
         <img src="hero2.png" alt="Executive transaction meeting" class="w-full h-full object-cover opacity-35">
@@ -316,73 +314,70 @@
       </div>
     </section>
 
-    <!-- Featured Transactions Section (Tombstones) -->
+    <!-- Sector Valuation Multiples Section -->
     <section class="py-24 px-6 md:px-12 bg-slate-50 dark:bg-brand-midnight transition-colors">
       <div class="max-w-6xl mx-auto">
         <div class="text-left mb-16" data-aos="fade-up">
-          <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Verified Closures</span>
-          <h2 class="text-3xl md:text-4xl font-bold font-serif mt-2 text-slate-900 dark:text-white">Featured Transactions</h2>
+          <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Market Intelligence</span>
+          <h2 class="text-3xl md:text-4xl font-bold font-serif mt-2 text-slate-900 dark:text-white">Sector Valuation Multiples</h2>
           <div class="w-16 h-1 bg-brand-gold mt-4"></div>
         </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Tombstone 1 -->
-          <div class="tombstone-card unique-align bg-white dark:bg-brand-navy p-8 rounded-xl border border-slate-200 dark:border-slate-800 border-t-4 border-t-blue-500 shadow-md text-left rtl:text-right flex flex-col justify-between min-h-[250px] relative hover:border-brand-gold transition duration-300">
-            <p class="text-sm uppercase text-brand-gold tracking-widest font-bold text-left rtl:text-right">SaaS & Enterprise Software</p>
-            <div class="my-6 text-left rtl:text-right">
-              <h4 class="font-bold text-2xl text-slate-900 dark:text-white font-serif text-left rtl:text-right">OPSGRID</h4>
-              <p class="text-sm text-slate-400 my-2 text-left rtl:text-right">Acquired by</p>
-              <h5 class="font-bold text-lg text-slate-700 dark:text-slate-300 text-left rtl:text-right">INTELLIGENT DYNAMICS</h5>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Multiples Card 1 -->
+          <div class="bg-white dark:bg-brand-navy p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md flex flex-col justify-between hover-glow transition duration-300" data-aos="fade-up">
+            <div>
+              <span class="text-xs font-bold text-brand-royal dark:text-brand-teal tracking-widest uppercase">Technology & SaaS</span>
+              <h3 class="font-bold text-2xl font-serif text-slate-900 dark:text-white mt-2 mb-4">12.0x – 18.0x <span class="text-xs font-sans text-slate-400">EV/EBITDA</span></h3>
+              <p class="text-slate-500 text-xs mb-6">Valuation is heavily driven by gross margins, recurring revenue percentages, and net retention rates.</p>
             </div>
-            <div class="text-left rtl:text-right">
-              <div class="w-8 h-[1px] bg-slate-300 dark:bg-slate-700 my-2"></div>
-              <p class="text-lg font-bold text-slate-900 dark:text-white font-serif text-left rtl:text-right">$145,000,000</p>
-              <p class="text-sm text-slate-400 mt-1 text-left rtl:text-right">Sell-Side Advisor</p>
-            </div>
-          </div>
-
-          <!-- Tombstone 2 -->
-          <div class="tombstone-card unique-align bg-white dark:bg-brand-navy p-8 rounded-xl border border-slate-200 dark:border-slate-800 border-t-4 border-t-brand-teal shadow-md text-left rtl:text-right flex flex-col justify-between min-h-[250px] relative hover:border-brand-gold transition duration-300">
-            <p class="text-sm uppercase text-brand-gold tracking-widest font-bold text-left rtl:text-right">Healthcare & Medtech</p>
-            <div class="my-6 text-left rtl:text-right">
-              <h4 class="font-bold text-2xl text-slate-900 dark:text-white font-serif text-left rtl:text-right">PHARMACARE</h4>
-              <p class="text-sm text-slate-400 my-2 text-left rtl:text-right">Recapitalized by</p>
-              <h5 class="font-bold text-lg text-slate-700 dark:text-slate-300 text-left rtl:text-right">HALO VENTURES</h5>
-            </div>
-            <div class="text-left rtl:text-right">
-              <div class="w-8 h-[1px] bg-slate-300 dark:bg-slate-700 my-2"></div>
-              <p class="text-lg font-bold text-slate-900 dark:text-white font-serif text-left rtl:text-right">$82,500,000</p>
-              <p class="text-sm text-slate-400 mt-1 text-left rtl:text-right">Transaction Advisor</p>
+            <div class="border-t border-slate-100 dark:border-slate-800/80 pt-4">
+              <div class="flex justify-between text-xs my-1">
+                <span class="text-slate-400">EV/Revenue Multiple</span>
+                <span class="font-bold text-slate-700 dark:text-slate-300">6.0x – 10.0x</span>
+              </div>
+              <div class="flex justify-between text-xs my-1">
+                <span class="text-slate-400">Key Driver</span>
+                <span class="font-bold text-brand-gold">Net Retention Rate (NRR)</span>
+              </div>
             </div>
           </div>
 
-          <!-- Tombstone 3 -->
-          <div class="tombstone-card unique-align bg-white dark:bg-brand-navy p-8 rounded-xl border border-slate-200 dark:border-slate-800 border-t-4 border-t-brand-gold shadow-md text-left rtl:text-right flex flex-col justify-between min-h-[250px] relative hover:border-brand-gold transition duration-300">
-            <p class="text-sm uppercase text-brand-gold tracking-widest font-bold text-left rtl:text-right">Advanced Manufacturing</p>
-            <div class="my-6 text-left rtl:text-right">
-              <h4 class="font-bold text-2xl text-slate-900 dark:text-white font-serif text-left rtl:text-right">VORTEX MFG</h4>
-              <p class="text-sm text-slate-400 my-2 text-left rtl:text-right">Acquired by</p>
-              <h5 class="font-bold text-lg text-slate-700 dark:text-slate-300 text-left rtl:text-right">GLOBAL INDUSTRIAL PARTNERS</h5>
+          <!-- Multiples Card 2 -->
+          <div class="bg-white dark:bg-brand-navy p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md flex flex-col justify-between hover-glow transition duration-300" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <span class="text-xs font-bold text-brand-royal dark:text-brand-teal tracking-widest uppercase">Healthcare & Medtech</span>
+              <h3 class="font-bold text-2xl font-serif text-slate-900 dark:text-white mt-2 mb-4">10.0x – 14.0x <span class="text-xs font-sans text-slate-400">EV/EBITDA</span></h3>
+              <p class="text-slate-500 text-xs mb-6">Diligence and valuation models emphasize regulatory compliance, intellectual property, and scale.</p>
             </div>
-            <div class="text-left rtl:text-right">
-              <div class="w-8 h-[1px] bg-slate-300 dark:bg-slate-700 my-2"></div>
-              <p class="text-lg font-bold text-slate-900 dark:text-white font-serif text-left rtl:text-right">$210,000,000</p>
-              <p class="text-sm text-slate-400 mt-1 text-left rtl:text-right">Buy-Side Advisor</p>
+            <div class="border-t border-slate-100 dark:border-slate-800/80 pt-4">
+              <div class="flex justify-between text-xs my-1">
+                <span class="text-slate-400">EV/Revenue Multiple</span>
+                <span class="font-bold text-slate-700 dark:text-slate-300">3.0x – 5.0x</span>
+              </div>
+              <div class="flex justify-between text-xs my-1">
+                <span class="text-slate-400">Key Driver</span>
+                <span class="font-bold text-brand-gold">Proprietary Technology IP</span>
+              </div>
             </div>
           </div>
 
-          <!-- Tombstone 4 -->
-          <div class="tombstone-card unique-align bg-white dark:bg-brand-navy p-8 rounded-xl border border-slate-200 dark:border-slate-800 border-t-4 border-t-purple-500 shadow-md text-left rtl:text-right flex flex-col justify-between min-h-[250px] relative hover:border-brand-gold transition duration-300">
-            <p class="text-sm uppercase text-brand-gold tracking-widest font-bold text-left rtl:text-right">Logistics & Supply Chain</p>
-            <div class="my-6 text-left rtl:text-right">
-              <h4 class="font-bold text-2xl text-slate-900 dark:text-white font-serif text-left rtl:text-right">CARGOX</h4>
-              <p class="text-sm text-slate-400 my-2 text-left rtl:text-right">Acquired by</p>
-              <h5 class="font-bold text-lg text-slate-700 dark:text-slate-300 text-left rtl:text-right">LOGIX CO</h5>
+          <!-- Multiples Card 3 -->
+          <div class="bg-white dark:bg-brand-navy p-8 rounded-xl border border-slate-200 dark:border-slate-800 shadow-md flex flex-col justify-between hover-glow transition duration-300" data-aos="fade-up" data-aos-delay="200">
+            <div>
+              <span class="text-xs font-bold text-brand-royal dark:text-brand-teal tracking-widest uppercase">Advanced Manufacturing</span>
+              <h3 class="font-bold text-2xl font-serif text-slate-900 dark:text-white mt-2 mb-4">7.0x – 9.5x <span class="text-xs font-sans text-slate-400">EV/EBITDA</span></h3>
+              <p class="text-slate-500 text-xs mb-6">Valuation is structured around asset concentration, customer tenure, and supply chain defensibility.</p>
             </div>
-            <div class="text-left rtl:text-right">
-              <div class="w-8 h-[1px] bg-slate-300 dark:bg-slate-700 my-2"></div>
-              <p class="text-lg font-bold text-slate-900 dark:text-white font-serif text-left rtl:text-right">$64,000,000</p>
-              <p class="text-sm text-slate-400 mt-1 text-left rtl:text-right">Sell-Side Advisor</p>
+            <div class="border-t border-slate-100 dark:border-slate-800/80 pt-4">
+              <div class="flex justify-between text-xs my-1">
+                <span class="text-slate-400">EV/Revenue Multiple</span>
+                <span class="font-bold text-slate-700 dark:text-slate-300">1.2x – 2.0x</span>
+              </div>
+              <div class="flex justify-between text-xs my-1">
+                <span class="text-slate-400">Key Driver</span>
+                <span class="font-bold text-brand-gold">Asset Utilization Rate</span>
+              </div>
             </div>
           </div>
         </div>
