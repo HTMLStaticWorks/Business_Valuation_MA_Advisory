@@ -14,10 +14,20 @@ html, body {
 body {
   font-family: var(--font-sans);
   scroll-behavior: smooth;
+  line-height: 1.625;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, .font-serif {
+p {
+  line-height: 1.75;
+  letter-spacing: 0.015em;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
   font-family: var(--font-serif);
+  letter-spacing: -0.015em;
+  line-height: 1.25;
 }
 
 /* Custom Scrollbar */
@@ -25,14 +35,14 @@ h1, h2, h3, h4, .font-serif {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #071A2F;
+  background: #080D1A;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e3a8a;
+  background: #2B527E;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #c5a880; /* Soft Gold hover */
+  background: #B89D70; /* Muted Brushed Brass hover */
 }
 
 /* Glassmorphism Accents */
@@ -44,7 +54,7 @@ h1, h2, h3, h4, .font-serif {
 }
 
 .dark .glass-panel {
-  background: rgba(7, 26, 47, 0.5);
+  background: rgba(8, 13, 26, 0.5);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -219,33 +229,11 @@ html.dark,
 }
 
 /* Custom Tailwind utility override for home2.html hero middle gradient color */
-.dark .via-\[\#0c1f35\] {
+.dark .via-\[\#0E1626\] {
   --tw-gradient-to: rgba(0, 0, 0, 0) !important;
   --tw-gradient-stops: var(--tw-gradient-from), #030303 var(--tw-gradient-via-position), var(--tw-gradient-to) !important;
 }
 
-/* About Page Font Weight Overrides */
-.about-page p,
-.about-page span:not(.nav-indicator):not(.fa-solid):not(.fa-brands),
-.about-page li,
-.about-page div:not(#header):not(#mobile-nav):not(footer):not(.fixed) {
-  font-weight: 500 !important;
-}
-
-.about-page h1,
-.about-page h2,
-.about-page h3,
-.about-page h4,
-.about-page h5,
-.about-page h6 {
-  font-weight: 700 !important;
-}
-
-.about-page header *:not(i):not([class*="fa-"]),
-.about-page footer *:not(i):not([class*="fa-"]),
-.about-page #mobile-nav *:not(i):not([class*="fa-"]) {
-  font-weight: inherit !important;
-}
 
 /* Footer text contrast overrides */
 footer, 
@@ -285,6 +273,12 @@ footer h4.text-slate-900 {
 }
 
 .dark footer a:hover {
-  color: #c5a880 !important; /* Maintain soft gold color on hover */
+  color: #B89D70 !important; /* Maintain muted brushed brass color on hover */
+}
+
+/* Force tombstone cards to always center-align text in LTR and RTL */
+.tombstone-card,
+.tombstone-card * {
+  text-align: center !important;
 }
 

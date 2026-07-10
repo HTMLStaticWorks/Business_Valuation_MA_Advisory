@@ -21,13 +21,13 @@
         extend: {
           colors: {
             brand: {
-              navy: '#071A2F',
-              midnight: '#0F2747',
-              royal: '#2563eb',
-              slate: '#475569',
-              teal: '#0d9488',
-              gold: '#c5a880',
-              silver: '#e2e8f0'
+              navy: '#080D1A',
+              midnight: '#0E1626',
+              royal: '#2B527E',
+              slate: '#64748B',
+              teal: '#1A4B42',
+              gold: '#B89D70',
+              silver: '#F1F5F9'
             }
           },
           fontFamily: {
@@ -66,15 +66,19 @@
     <!-- Desktop Navigation -->
     <nav class="hidden lg:flex items-center space-x-4 xl:space-x-8 rtl:space-x-reverse font-sans text-sm uppercase tracking-wider">
       <a href="index.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
-        Home 1
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
-      </a>
-      <a href="home2.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
-        Home 2
+        Home
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
       <a href="about.html" class="nav-link active relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
         About
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="valuation.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        Valuation
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
+      </a>
+      <a href="advisory.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
+        M&A Advisory
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold scale-x-0 transition-transform duration-300"></span>
       </a>
       <a href="transactions.html" class="nav-link relative text-brand-navy dark:text-slate-300 hover:text-brand-gold transition duration-300 py-2">
@@ -117,9 +121,10 @@
 
   <!-- Mobile Overlay Navigation Menu -->
   <div id="mobile-nav" class="fixed inset-0 bg-brand-navy/95 backdrop-blur-lg z-30 hidden flex-col justify-center items-center space-y-6 text-xl text-white uppercase tracking-widest font-sans">
-    <a href="index.html" class="hover:text-brand-gold transition duration-300">Home 1</a>
-    <a href="home2.html" class="hover:text-brand-gold transition duration-300">Home 2</a>
+    <a href="index.html" class="hover:text-brand-gold transition duration-300">Home</a>
     <a href="about.html" class="hover:text-brand-gold transition duration-300">About</a>
+    <a href="valuation.html" class="hover:text-brand-gold transition duration-300">Valuation</a>
+    <a href="advisory.html" class="hover:text-brand-gold transition duration-300">M&A Advisory</a>
     <a href="transactions.html" class="hover:text-brand-gold transition duration-300">Transactions</a>
     <a href="blog.html" class="hover:text-brand-gold transition duration-300">Blog</a>
     <a href="contact.html" class="hover:text-brand-gold transition duration-300">Contact</a>
@@ -158,11 +163,23 @@
         <div data-aos="fade-up">
           <h2 class="text-3xl font-bold font-serif text-slate-900 dark:text-white">Our Corporate History</h2>
           <p class="text-slate-600 dark:text-slate-400 mt-4 text-sm leading-relaxed">
-            Founded with a commitment to offering executive-level transactional advisory without the overhead of massive legacy banks, Aegis has managed over 120 mid-market corporate transitions.
+            Founded with a commitment to offering executive-level transactional advisory without the overhead of massive legacy banks, Aegis delivers undivided partner focus for every transaction.
           </p>
-          <p class="text-slate-600 dark:text-slate-400 mt-4 text-sm leading-relaxed">
-            We focus exclusively on transactions ranging between $10M and $250M enterprise value. This focus allows us to provide undivided managing partner attention to every client, designing tailored marketing campaigns, maintaining rigorous data blockades, and coordinating exit structures.
-          </p>
+          
+          <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div class="border-l-2 border-brand-gold pl-4">
+              <span class="block text-2xl font-serif font-bold text-slate-900 dark:text-white">120+</span>
+              <span class="text-slate-500 text-xs mt-1 block">Transitions Managed</span>
+            </div>
+            <div class="border-l-2 border-brand-gold pl-4">
+              <span class="block text-2xl font-serif font-bold text-slate-900 dark:text-white">$10M–$250M</span>
+              <span class="text-slate-500 text-xs mt-1 block">Enterprise Value Focus</span>
+            </div>
+            <div class="border-l-2 border-brand-gold pl-4">
+              <span class="block text-2xl font-serif font-bold text-slate-900 dark:text-white">100%</span>
+              <span class="text-slate-500 text-xs mt-1 block">Senior Partner Attention</span>
+            </div>
+          </div>
         </div>
         <div class="relative" data-aos="fade-up" data-aos-delay="200">
           <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Aegis Corporate HQ Building" class="rounded-xl shadow-xl object-cover h-[350px] w-full">
@@ -299,25 +316,25 @@
           <div class="p-6 bg-white dark:bg-brand-navy rounded-xl border border-slate-200/50 dark:border-slate-800/50 shadow relative">
             <span class="text-5xl font-bold font-serif text-brand-gold/10 absolute top-4 right-4">01</span>
             <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white mb-2">Audit Engagement</h4>
-            <p class="text-slate-500 text-xs">We detail engagement terms under reciprocal NDAs and extract primary corporate ledgers and tax registries.</p>
+            <p class="text-slate-500 text-sm">We detail engagement terms under reciprocal NDAs and extract primary corporate ledgers and tax registries.</p>
           </div>
 
           <div class="p-6 bg-white dark:bg-brand-navy rounded-xl border border-slate-200/50 dark:border-slate-800/50 shadow relative">
             <span class="text-5xl font-bold font-serif text-brand-gold/10 absolute top-4 right-4">02</span>
             <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white mb-2">Appraisal Modeling</h4>
-            <p class="text-slate-500 text-xs">Our analytical team publishes complete valuation models using multiple appraisal frameworks.</p>
+            <p class="text-slate-500 text-sm">Our analytical team publishes complete valuation models using multiple appraisal frameworks.</p>
           </div>
 
           <div class="p-6 bg-white dark:bg-brand-navy rounded-xl border border-slate-200/50 dark:border-slate-800/50 shadow relative">
             <span class="text-5xl font-bold font-serif text-brand-gold/10 absolute top-4 right-4">03</span>
             <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white mb-2">Blind Outplacement</h4>
-            <p class="text-slate-500 text-xs">Vetted candidates receive blind summaries to prevent early leaks, gathering strategic Letters of Intent.</p>
+            <p class="text-slate-500 text-sm">Vetted candidates receive blind summaries to prevent early leaks, gathering strategic Letters of Intent.</p>
           </div>
 
           <div class="p-6 bg-white dark:bg-brand-navy rounded-xl border border-slate-200/50 dark:border-slate-800/50 shadow relative">
             <span class="text-5xl font-bold font-serif text-brand-gold/10 absolute top-4 right-4">04</span>
             <h4 class="font-serif font-bold text-lg text-slate-900 dark:text-white mb-2">Deal Closure</h4>
-            <p class="text-slate-500 text-xs">Managing coordination with legal partners to oversee audits and complete transfer registries securely.</p>
+            <p class="text-slate-500 text-sm">Managing coordination with legal partners to oversee audits and complete transfer registries securely.</p>
           </div>
         </div>
       </div>
@@ -369,11 +386,11 @@
       <div>
         <h4 class="font-bold text-slate-900 dark:text-white font-serif tracking-wider mb-4">Advisory Services</h4>
         <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:text-brand-gold transition">Business Valuation</a></li>
-          <li><a href="#" class="hover:text-brand-gold transition">Sell-Side M&A</a></li>
-          <li><a href="#" class="hover:text-brand-gold transition">Buy-Side M&A</a></li>
-          <li><a href="#" class="hover:text-brand-gold transition">Exit & Succession Planning</a></li>
-          <li><a href="#" class="hover:text-brand-gold transition">Due Diligence Audit</a></li>
+          <li><a href="valuation.html" class="hover:text-brand-gold transition">Business Valuation</a></li>
+          <li><a href="advisory.html" class="hover:text-brand-gold transition">Sell-Side M&A</a></li>
+          <li><a href="advisory.html" class="hover:text-brand-gold transition">Buy-Side M&A</a></li>
+          <li><a href="advisory.html" class="hover:text-brand-gold transition">Exit & Succession Planning</a></li>
+          <li><a href="advisory.html" class="hover:text-brand-gold transition">Due Diligence Audit</a></li>
         </ul>
       </div>
 
@@ -381,9 +398,10 @@
       <div>
         <h4 class="font-bold text-slate-900 dark:text-white font-serif tracking-wider mb-4">Corporate Links</h4>
         <ul class="space-y-2 text-sm">
-          <li><a href="index.html" class="hover:text-brand-gold transition">Home Page 1</a></li>
-          <li><a href="home2.html" class="hover:text-brand-gold transition">Home Page 2</a></li>
+          <li><a href="index.html" class="hover:text-brand-gold transition">Home</a></li>
           <li><a href="about.html" class="hover:text-brand-gold transition">About Our Firm</a></li>
+          <li><a href="valuation.html" class="hover:text-brand-gold transition">Valuation Services</a></li>
+          <li><a href="advisory.html" class="hover:text-brand-gold transition">M&A Advisory</a></li>
           <li><a href="transactions.html" class="hover:text-brand-gold transition">Transactions</a></li>
           <li><a href="blog.html" class="hover:text-brand-gold transition">Corporate Insights</a></li>
           <li><a href="contact.html" class="hover:text-brand-gold transition">Contact Securely</a></li>
